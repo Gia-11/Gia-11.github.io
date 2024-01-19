@@ -1,0 +1,122 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* CSS for header 1 */
+header {
+    background-color: #4285f4;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+
+/* CSS Main Content Section */
+section {
+    padding: 20px;
+}
+
+
+/* CSS 2 grid containers */
+.board-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.board {
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS media Queries for Desktop */
+@media screen and (max-width: 768px) {
+    .board {
+        width: 45%;
+    }
+}
+
+/* CSS media Queries for Smartphone */
+@media screen and (max-width: 480px) {
+    .board {
+        width: 100%;
+    }
+}
+
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* CSS for header 2 */
+header {
+    background-color: #4285f4;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section {
+    padding: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/* Adjust the margin-bottom as needed for your desired spacing */
+.last-section {
+    margin-bottom: 20px; 
+}
