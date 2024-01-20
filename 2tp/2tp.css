@@ -1,5 +1,4 @@
 /* styles.css */
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     background-color: #f5f5f5;
     color: #333;
 }
-
 
 /* CSS for header 1 */
 header {
@@ -17,12 +15,10 @@ header {
     color: white;
 }
 
-
 /* CSS Main Content Section */
 section {
     padding: 20px;
 }
-
 
 /* CSS 2 grid containers */
 .board-container {
