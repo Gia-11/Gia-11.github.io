@@ -11,7 +11,7 @@ body {
 
 /* CSS for header 1 */
 header {
-    background-color: #4285f4;
+    background-color: #111344;
     padding: 20px;
     text-align: center;
     color: white;
@@ -59,13 +59,13 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f7e7ce;
     color: #333;
 }
 
 /* CSS for header 2 */
 header {
-    background-color: #4285f4;
+    background-color: #111344;
     padding: 20px;
     text-align: center;
     color: white;
@@ -98,7 +98,7 @@ section {
 
 button {
     padding: 10px;
-    background-color: #4285f4;
+    background-color: #111344;
     color: white;
     border: none;
     border-radius: 5px;
@@ -106,7 +106,7 @@ button {
 }
 
 footer {
-    background-color: #333;
+    background-color: #111344;
     color: white;
     text-align: center;
     padding: 10px;
