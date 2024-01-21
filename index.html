@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>2 The Point</title>
-    <meta name="description" content="This is a blank HTML5 template">
+    <meta name="description" content="Digital Bulletin Boards">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="author" content="SPate"> 
     <link rel="stylesheet" href="2tp.css">
 
 </head>
 
 <body>
-    <img src="your_logo_image_here" alt="Logo" />
-
-    <div class="nav">
-        <a class="active" href="#home">Home</a>
-        <a href="#">Product</a>
-        <a href="#">Support</a>
-        <a href="#">About Us</a>
-        <a href="#">Contact</a>
-      </div>
+    <!-- Navigation Container -->
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
     <header>
+        <!-- LoGo needs to be adjusted to the upper left, unsure why code is not functioning correctly -->
+        <img src="images/2thepoint.png" alt="Logo" width="50" height="50" class="left">
+    <style>
+        img {
+        border-radius: 50%;
+        }
+    </style>
         <h1>Digital Bulletin Boards</h1>
         <p>Share and display information easily</p>
         <button onclick="alert('Button clicked!')">BUTTON</button>

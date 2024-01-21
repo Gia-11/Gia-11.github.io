@@ -1,6 +1,35 @@
 /* styles.css */
+/* CSS style for Navigation */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111344;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+h1 {
+    font-family:'Times New Roman', Bold;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'sans-serif', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
@@ -17,6 +46,7 @@ header {
 
 /* CSS Main Content Section */
 section {
+    font-family: 'sans-serif', semi-Bold;
     padding: 20px;
 }
 
@@ -115,4 +145,5 @@ footer {
 /* Adjust the margin-bottom as needed for your desired spacing */
 .last-section {
     margin-bottom: 20px; 
+    text-align: center;
 }
