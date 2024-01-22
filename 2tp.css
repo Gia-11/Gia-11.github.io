@@ -148,3 +148,11 @@ footer {
     margin-bottom: 20px; 
     text-align: center;
 }
+/* CSS style for Nav Logo */
+.logo-img {
+    float: left;
+    position: relative;
+    margin: 10px 15px 15px 10px;
+    border-radius: 50px;
+  }
+  
