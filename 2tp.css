@@ -66,7 +66,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* CSS media Queries for Desktop */
+/* CSS media Queries for Tablet */
 @media screen and (max-width: 768px) {
     .board {
         width: 45%;
