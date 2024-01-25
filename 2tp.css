@@ -142,6 +142,21 @@ footer {
     width: 100%;
 }
 
+/* Media query for tablets and phones */
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide the navigation menu by default */
+    }
+
+    .nav-list.show {
+        display: block; /* Show the navigation menu when the toggle button is clicked */
+    }
+
+    .nav-list li {
+        display: block; /* Display list items vertically */
+    }
+}
+
 
 /* Adjust the margin-bottom as needed for your desired spacing */
 .last-section {
