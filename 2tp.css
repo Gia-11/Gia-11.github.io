@@ -144,7 +144,7 @@ footer {
 
 /* Default styles for navigation menu */
 .navbar {
-    background-color: #333;
+    background-color: #52154E;
     padding: 10px 0;
 }
 
@@ -167,15 +167,15 @@ footer {
 /* Media query for tablets and phones */
 @media screen and (max-width: 768px) {
     .nav-links {
-        display: none; /* Hide the navigation menu by default */
+        display: none; 
     }
 
     .nav-links.show {
-        display: block; /* Show the navigation menu when the toggle button is clicked */
+        display: block; 
     }
 
     .nav-links li {
-        display: block; /* Display list items vertically */
+        display: block; 
     }
 }
 
