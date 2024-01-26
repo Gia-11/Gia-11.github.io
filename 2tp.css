@@ -142,17 +142,39 @@ footer {
     width: 100%;
 }
 
+/* Default styles for navigation menu */
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
 /* Media query for tablets and phones */
 @media screen and (max-width: 768px) {
-    .nav-list {
+    .nav-links {
         display: none; /* Hide the navigation menu by default */
     }
 
-    .nav-list.show {
+    .nav-links.show {
         display: block; /* Show the navigation menu when the toggle button is clicked */
     }
 
-    .nav-list li {
+    .nav-links li {
         display: block; /* Display list items vertically */
     }
 }

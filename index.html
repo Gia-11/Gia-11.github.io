@@ -12,10 +12,12 @@
 
 <body>
     <!-- Navigation Container -->
-    <nav class="navbar background">
+    <header>
+    <nav class="navbar">
+        <button class="toggle-btn">Menu</button>
         <!-- LoGo needs to be adjusted to the upper left, unsure why code is not functioning correctly 
         <img class="logo-img" src="images/2thepoint.png" width="20" height="20" ALT="logo" ALIGN=CENTER> -->
-        <ul class="nav-list">
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="product.html">Product</a></li>
             <li><a href="support.html">Support</a></li>
@@ -24,6 +26,7 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    </header>
 
     <header>
         <h1>Digital Bulletin Boards</h1>
@@ -88,12 +91,12 @@
     <script>
         // Get the toggle button and navigation links
         const toggleBtn = document.querySelector('.toggle-btn');
-        const navList = document.querySelector('.nav-list');
+        const navLinks = document.querySelector('.nav-links');
 
         // Add event listener to toggle button
         toggleBtn.addEventListener('click', function() {
-            // Toggle the 'show' class on navigation list
-            navList.classList.toggle('show');
+            // Toggle the 'show' class on navigation links
+            navLinks.classList.toggle('show');
         });
     </script>
     
