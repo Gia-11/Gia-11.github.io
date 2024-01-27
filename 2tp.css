@@ -179,6 +179,12 @@ footer {
     }
 }
 
+.logo {
+    display: block;
+    max-width: 100px; /* Adjust the maximum width as needed */
+    margin: 20px auto; /* Adjust the margin for positioning */
+}
+
 
 /* Adjust the margin-bottom as needed for your desired spacing */
 .last-section {
