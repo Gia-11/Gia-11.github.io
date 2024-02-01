@@ -8,6 +8,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="author" content="SPate"> 
     <link rel="stylesheet" href="2tp.css">
+    <!-- CSS for image side by side container -->
+<style>
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    flex: 1;
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-box {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.text-box h2 {
+    margin-top: 0;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add margin bottom to separate image and text on smaller screens */
+    }
+}
+</style>
+
 </head>
 
 <body>
@@ -33,24 +75,34 @@
         <h1>Gallery</h1>
     </header>
 
-    <main>
-        <section class="gallery">
-            <h2>Web Use Case</h2>
-            <div class="gallery-item">
-                <img src="images/focus.png" alt="focus on progress">
-                <div class="overlay">
-                </div>
-            </div>
-            <br>
-            <div class="gallery-item">
-                <img src="images/surfacehub_collaboration.jpeg" alt="surfacehub_collaboration">
-                <div class="overlay">
-                    <h2>Surface Hub Collaboration Use Case</h2> <!-- Surface Hub Collaboration created and photo taken by (me) Spate -->
-                </div>
-            </div>
-        </section>
-    </main>
+    <div class="container">
+        <div class="image-container">
+            <img src="images/focus.png" alt="Responsive Image">
+        </div>
+        <div class="text-box">
+            <h2>Focus</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, 
+                odio eu consequat convallis, velit lorem laoreet leo, at fringilla sapien est ac eros.
+            </p>
+        </div>
+    </div>
     <br>
+
+    <div class="container">
+        <div class="image-container">
+            <img src="images/surfacehub_collaboration.jpeg" alt="Responsive Image">
+        </div>
+        <div class="text-box">
+            <h2>Collaborate</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, 
+                odio eu consequat convallis, velit lorem laoreet leo, at fringilla sapien est ac eros.
+            </p>
+        </div>
+    </div>
+    <br>
+    <section class="last-section">
+        <p>Sed risus ultricies tristique nulla aliquet. Et tortor consequat id porta.</p>
+    </section>
 
     <footer>
         <small>Copyright @ WéB1 2024 _ Two The Point _ All rights reserved.</small>
