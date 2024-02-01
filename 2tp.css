@@ -185,10 +185,9 @@ footer {
     max-width: 80px; /* Adjust the maximum width as needed */
     margin: 20px auto; /* Adjust the margin for positioning */
     border: 2px solid #52154E;
-  padding: 5px;
-  border-radius: 50px 50px;
+    padding: 5px;
+    border-radius: 50px 50px;
 }
-
 
 /* Adjust the margin-bottom as needed for your desired spacing */
 .last-section {
