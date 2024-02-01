@@ -189,6 +189,26 @@ footer {
     border-radius: 50px 50px;
 }
 
+/* Tring to move logo without disturbing nav bar */
+/* CSS style for Nav Logo 
+.logo-img {
+    float: left;
+    position: relative;
+    margin: 20px auto;
+    border-radius: 50px 50px;
+  }
+  
+  .bg-div {
+    background: #333;
+    overflow: hidden;
+    display: block;
+    max-width: 80px; 
+    margin: 20px auto; 
+    border: 2px solid #52154E;
+    padding: 5px;
+    border-radius: 50px 50px;
+  } */
+
 /* Adjust the margin-bottom as needed for your desired spacing */
 .last-section {
     margin-bottom: 20px; 
