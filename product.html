@@ -8,34 +8,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="author" content="SPate"> 
     <link rel="stylesheet" href="2tp.css">
-
-    <!-- CSS inline for specific page features / wrapped images and text -->
     <style>
-        .image-container {
-            float: left;
-            width: 30%; 
-            margin-right: 20px; 
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        h3 {text-align: center;
+            text-decoration: underline;
         }
-
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        p {
-            margin-top: 0;
-        }
-
+        p {text-align: center;}
+        
         .myDiv {
-  border: 10px outset #52154E;
-  background-color: #f7e7ce; 
-  width: 300px;  
-  height: 100; 
-  text-align: center;
-  padding: 20px;
-  margin: 0px;
+  display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 50vh; /* Adjust height as needed */
 }
+
+.grid-container {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
     </style>
 </head>
 
@@ -62,33 +54,24 @@
         <h1>Product In Action</h1>
     </header>
 
-    <div class="image-container">
-        <img src="images/git-er-done.png" alt="git-er-done">
+    <section>
+        <h1>Possible Use Cases</h1>
+        <p>Tempus egestas sed sed risus pretium quam vulputate.
+        Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="images/pexels-negative-space-34639.jpg" alt="Digital Display">
+        </div>
+        <div class="grid-item">
+            <img src="images/working.png" alt="Work In Progress">
+        </div>
+        <div class="grid-item">
+            <img src="images/pexels-rdne-stock-project-8500312.jpg" alt="Vowels Display">
+        </div>
     </div>
-    <p>Add encouraging messages to your employees.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt, odio eu consequat convallis, 
-        velit lorem laoreet leo, at fringilla sapien est ac eros. Mauris eu odio quam. Vivamus luctus lectus nec 
-        ligula ultricies, id cursus quam vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada 
-        fames ac turpis egestas. Ut dapibus sapien vel lorem consequat, non volutpat ligula fermentum.
-    </p>
-
-    <div class="image-container">
-        <img src="images/working.png" alt="working board">
-    </div>
-    <p>See live status updates of Work In Progress. 
-        Nulla posuere lacus id consequat sollicitudin. Proin id malesuada magna, eget ultrices magna. 
-        In consequat sit amet elit id interdum. Mauris fringilla, quam vel suscipit pulvinar, lacus ipsum dignissim elit, 
-        at pharetra ligula nisi non ante. Phasellus vel magna sed odio eleifend fermentum eget ac libero. In at mi nulla.
-    </p>
-
-    <div class="image-container">
-        <img src="images/surfacehub.jpeg" alt="surfacehub"> <!-- Surface Hub Team Meeting created and photo taken by (me) Spate -->
-    </div>
-    <p>Alerts and reminders for those who may not be at their computer. Perhaps they are working in the lab and need a heads up! 
-        Fusce sed felis ligula. Nulla vitae lectus lectus. Duis ultricies neque sit amet ex fermentum fringilla. 
-        Nullam ac tristique nisi. Sed tempus tortor vel mi convallis, eu ultricies mi scelerisque. Cras tristique rhoncus velit.
-    </p>
-
+    </section>
+    <br>
+    
         <div class="myDiv">
             <section>
             <h3>Features</h3>
