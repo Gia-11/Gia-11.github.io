@@ -14,6 +14,12 @@
             width: 100%;
             height: auto;
         }
+
+        /* Css for registration form */
+        h3 {text-align: center;}
+        div {text-align: center;}
+        form {text-align: center;}
+</style>
     </style>
 </head>
 
@@ -68,33 +74,39 @@
     </section>
 
     <section>
-        <h1>Possible Use Cases</h1>
-        <p>Tempus egestas sed sed risus pretium quam vulputate.
-        Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna.</p>
-
-    <div class="grid-container">
-        <div class="grid-item">
-            <img src="images/pexels-negative-space-34639.jpg" alt="Digital Display">
-        </div>
-        <div class="grid-item">
-            <img src="images/pexels-rdne-stock-project-7092343.jpg" alt="Exam Notice Display">
-        </div>
-        <div class="grid-item">
-            <img src="images/pexels-rdne-stock-project-8500312.jpg" alt="Vowels Display">
-        </div>
-    </div>
+        <h3>User Registration</h3>
     </section>
-
-    <section>
-        <h2>Click to See more</h2>
-        <p>Turpis egestas pretium aenean pharetra magna. Enim blandit volutpat maecenas volutpat blandit.</p>
-        <button onclick="alert('Happy Coding!')">Click me</button>
-    </section>
-    <br>
-
+    
+    <main>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="firstName">First Name<span>*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name<span>*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address<span>*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890">
+            </div>
+            <div class="form-group">
+                <label for="password">Password<span>*</span></label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    
     <section class="last-section">
         <p>Sed risus ultricies tristique nulla aliquet. Et tortor consequat id porta.</p>
     </section>
+
 
     <footer>
         <small>Copyright @ WéB1 2024 _ Two The Point _ All rights reserved.</small>
