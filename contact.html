@@ -1,86 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact</title>
-    <meta name="description" content="Digital Bulletin Boards">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name="author" content="SPate"> 
-    <link rel="stylesheet" href="2tp.css">
-    <style>
-    h2 {text-align: center;}
-    p {text-align: center;}
-    
-    form {
-        max-width: 64em;
-        margin: auto;
-        text-align: center;
-      }
-    </style>
-
-
+<title>Dog Freaks</title>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<link href="dog_styles.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-    <!-- Navigation Container -->
-    <header>
-    <nav class="navbar">
-        <button class="toggle-btn">Menu</button>
-        <!-- LoGo needs to be adjusted to the upper left, unsure why code is not functioning correctly 
-        <img class="logo-img" src="images/2thepoint.png" width="20" height="20" ALT="logo" ALIGN=CENTER> -->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <a href="index.html">
-        <img src="images/2thepoint.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
-    </a>
-    </header>
-
-    <header>
-        <h1>Contact Us</h1>
-    </header>
-
-    <main>
-        <section>
-            <h2>Contact Us</h2>
-            <p>Feel free to Contact Us by providing following:</p>
-        </section>
-
-        <section>
-            <h2>Contact Form</h2>
-            <form action="#" method="POST">
-                <label for="name">Your Name:</label><br>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Your Email:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <small>Copyright @ WéB1 2024 _ Two The Point _ All rights reserved.</small>
-    </footer>
-
-    <script>
-        // Get the toggle button and navigation links
-        const toggleBtn = document.querySelector('.toggle-btn');
-        const navLinks = document.querySelector('.nav-links');
-        // Add event listener to toggle button
-        toggleBtn.addEventListener('click', function() {
-            // Toggle the 'show' class on navigation links
-            navLinks.classList.toggle('show');
-        });
-    </script>
-
+<div id="wrapper">
+<div id="header">
+  <div align="center"><img src="img/png/logo.png" width="800" height="308" alt="dogfreaks" />
+  </div>
+  <div id="header-bottom"> 
+    <p id="tagline">The Home of everything about DOGS from dogs</p>
+<p></p>
+<ul>
+<li><a href="contact.html">Contact Us</a> | </li>
+<li><a href="aboutus.html">About Us</a> | </li>
+<li><a href="PPolicy.html">Privacy Policy</a> | </li>
+</ul>
+</div> <!--header bottom -->
+</div> <!-- header -->
+<div id="main">
+<div id="content">
+<div id="mainfeature">
+<h2>Maxxie Says</h2>
+<p>Maxxie tells us how a change of dog food has given his fur a new look.</p>
+<p class="more"><a href="">Read More</a></p>
+</div> <!--mainfeature -->
+<div class="inner">
+<h2>Contact Information</h2>
+<p>Phone: 999-999-9999 </p>
+<p>Email: dogquestions@thedogfreaks.com</p>
+</div> 
+<!--inner -->
+</div> <!-- content -->
+<div id="sidebar">
+<div id="inner">
+<h3>Site Search</h3>
+<form method="post" action="" id="searchform">
+<div>
+<label for="keywords">Keywords</label>: <input type="text" name="keywords" id="keywords"  class="text"/>
+</div>
+<div>
+<input type="submit" name="btnSearch" id="btnSearch" />
+</div>
+</form></div>
+<div id="inner">
+<h3>Coming Events</h3>
+<ul>
+<li> <span class="date">10 Apr</span>  -<br /><a href="">Seattle dog show</a></li>
+<li> <span class="date">13 Apr</span>  -<br /><a href="">World dog Skateboarding Championship</a></li>
+<li> <span class="date">21 Apr </span> -<br /><a href="">Hotdog dog eating Championship</a></li>
+</ul>
+</div>
+<div id="inner">
+<h3>Food of the Month</h3>
+<h4>The Big Bone is it good for you</h4>
+<p>Eti bibendum mauris nec nulla. Nullam cursus ullamcorper
+quam. Sed cursus vestibulum leo.</p>
+<p><a href="">more</a></p>
+</div> <!--inner -->
+</div> <!-- sidebar -->
+</div> <!--main -->
+</div>  <!--wrapper -->
 </body>
 </html>

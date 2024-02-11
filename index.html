@@ -1,137 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>2 The Point</title>
-    <meta name="description" content="Digital Bulletin Boards">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta name="author" content="SPate"> 
-    <link rel="stylesheet" href="2tp.css">
-    <style>
-        /* Hero image css */
-        .hero-image {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Css for registration form */
-        form {
-        max-width: 64em;
-        margin: auto;
-        text-align: center;
-      }
-
-        h3 {text-align: center;}
-        div {text-align: center;}
-        form {text-align: center;}
-</style>
-         
-    </style>
+<title>Dog Freaks</title>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1" />
+<link href="dog_styles.css" rel="stylesheet" type="text/css" />
 </head>
-
 <body>
-    <header>
-    <nav class="navbar">
-        <button class="toggle-btn">Menu</button>
-        <!-- LoGo needs to be adjusted to the upper left, unsure why code is not functioning correctly 
-        <img class="logo-img" src="images/2thepoint.png" width="20" height="20" ALT="logo" ALIGN=CENTER> -->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <a href="index.html">
-    <img src="images/2thepoint.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
-    </a>
-    </header>
+<div id="wrapper">
+<div id="header">
+  <div align="center"><img src="img/png/logo.png" width="800" height="308" alt="dogfreaks" />
+  </div>
+  <div id="header-bottom"> 
+    <p id="tagline">The Home of everything about DOGS from dogs</p>
+<p></p>
+<ul>
+<li><a href="contact.html">Contact Us</a> | </li>
+<li><a href="aboutus.html">About Us</a> | </li>
+<li><a href="PPolicy.html">Privacy Policy</a> | </li>
+</ul>
+</div> <!--header bottom -->
+</div> <!-- header -->
+<div id="main">
+<div id="content">
+<div id="mainfeature">
+<h2>Maxxie Says</h2>
+<p>Maxxie tells us how a change of dog food has given his fur a new look.</p>
+<p class="more"><a href="mainstory.html">Read More</a></p>
+</div> <!--mainfeature -->
+<div class="inner">
+<h2>Recent Features</h2>
+<ul class="features">
+<li>
+<h3><a href="">Eating your weight in hotdogs</a></h3>
+<img src="img/lachlan.jpg" width="54" height="63" alt="chihuaha" />
+<p class="author">Chihuahua Joe</p>
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent hendrerit
+iaculis arcu.</p>
+<p class="more"><a href="joestory.html">Full Story</a></p>
+</li>
+<li>
+<h3><a href="">Skateboarding super tips to get you started</a></h3>
+<img src="img/jules.jpg" width="51" height="61" alt="bulldog" />
+<p class="author">Earnne the bulldog</p>
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et
+ultrices posuere cubilia Curae; Praesent hendrerit
+iaculis arcu.</p>
+<p class="more"><a href="earnnestory.html">Full Story</a></p>
+</li>
+<li>
+<h3><a href="">The Complete  Survival Guide for owners</a></h3>
+<img src="img/mark.jpg" width="50" height="67" alt="big dog" />
+<p class="author">Buster the &quot;Big Dog&quot;</p>
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et
+ultrices posuere cubilia Curae; Praesent hendrerit
+iaculis arcu.</p>
+<p class="more"><a href="busterstory.html">Full Story</a></p>
+</li>
+<li>
+<h3><a href="">Five Tricks You Didn't Even Know You Knew</a></h3>
+<img src="img/mackie.jpg" width="57" height="57" alt="mackie" />
+<p class="author">Makkie</p>
+<p>Vestibulum ante ipsum primis in faucibus orci luctus et 
+ultrices posuere cubilia Curae; Praesent hendrerit
+iaculis arcu.</p>
+<p><a href="makkiestory.html">Full Story</a></p>
+</li>
+</ul>
+</div> 
+<!--inner -->
+</div> <!-- content -->
+<div id="sidebar">
+<div id="inner">
+<h3>Enter email for weekly tips</h3>
+<form method="post" action="thankyou.html" id="regform">
+<div>
+<label for="email">Email</label>: <input type="text" name="email" id="email"  class="text"/>
+</div>
+<div>
+<input type="submit" name="btnSearch" id="btnSearch" />
+</div>
+</form></div>
+<div id="inner">
+<h3>Coming Events</h3>
+<ul>
+<li> <span class="date">10 Apr</span>  -<br />Seattle dog show</li>
+<li> <span class="date">13 Apr</span>  -<br />World dog Skateboarding Championship</li>
+<li> <span class="date">21 Apr </span> -<br />Hotdog dog eating Championship</li>
+</ul>
+</div>
+<div id="inner">
+<h3>Food of the Month</h3>
+<h4>The Big Bone is it good for you</h4>
+<p>Eti bibendum mauris nec nulla. Nullam cursus ullamcorper
+quam. Sed cursus vestibulum leo.</p>
 
-    <header>
-        <h1>Digital Bulletin Boards</h1>
-        <p>Share and display information easily</p>
-        <button onclick="alert('Hello World!')">BUTTON</button>
-    </header>
-
-    <!-- Hero image -->
-    <img class="hero-image" src="images/pexels-alphatradezone-5833784.jpg" alt="Hero Image">
-    <!-- Source: https://www.pexels.com/photo/fingers-on-ipad-with-graph-on-screen-5833772/ -->
-
-    <section>
-        <h2>Multi use options</h2>
-        <p>Software to all for  the sharing and collaboration of ideas and messages over internet with realtime results.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Aliquam reprehenderit perferendis corporis minima quidem nobis quam?
-        </p>
-    </section>
-
-    <section>
-        <div class="board-container">
-            <div class="board">
-                <h2>WEB</h2>
-                <p>Stay updated with the latest news and announcements.</p>
-            </div>
-
-            <div class="board">
-                <h2>APP</h2>
-                <p>Check out upcoming events and important dates.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h3>User Registration Form</h3>
-    </section>
-    
-    <main>
-        <form id="registrationForm" onsubmit="return validateForm()">
-            <div class="form-group">
-                <label for="firstName">First Name<span>*</span></label>
-                <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-                <label for="lastName">Last Name<span>*</span></label>
-                <input type="text" id="lastName" name="lastName" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address<span>*</span></label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890">
-            </div>
-            <div class="form-group">
-                <label for="password">Password<span>*</span></label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Register</button>
-        </form>
-    </main>
-    
-    <section class="last-section">
-        <p>Please take the time to register, so you can stay up to date.</p>
-    </section>
-
-
-    <footer>
-        <small>Copyright @ WéB1 2024 _ Two The Point _ All rights reserved.</small>
-    </footer>
-
-    <script>
-        // Get the toggle button and navigation links
-        const toggleBtn = document.querySelector('.toggle-btn');
-        const navLinks = document.querySelector('.nav-links');
-
-        // Add event listener to toggle button
-        toggleBtn.addEventListener('click', function() {
-            // Toggle the 'show' class on navigation links
-            navLinks.classList.toggle('show');
-        });
-    </script>
-    
+</div> <!--inner -->
+</div> <!-- sidebar -->
+</div> <!--main -->
+</div>  <!--wrapper -->
 </body>
 </html>
