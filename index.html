@@ -5,21 +5,49 @@
 <title>Dog Freaks</title>
 <meta http-equiv="Content-Type"
 content="text/html; charset=iso-8859-1" />
-<link href="dog_styles.css" rel="stylesheet" type="text/css" />
+<!-- <link href="dog_styles.css" rel="stylesheet" type="text/css" /> -->
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </head>
 <body>
 <div id="wrapper">
 <div id="header">
-  <div align="center"><img src="img/png/logo.png" width="800" height="308" alt="dogfreaks" />
+  <div align="center"><img src="img/png/logo.png" width="800" height="308" alt="The Dog Freaks" />
   </div>
   <div id="header-bottom"> 
     <p id="tagline">The Home of everything about DOGS from dogs</p>
 <p></p>
-<ul>
+
+<!-- Original nav   <ul>
 <li><a href="contact.html">Contact Us</a> | </li>
-<li><a href="aboutus.html">About Us</a> | </li>
+<li><a href="about us.html">About Us</a> | </li>
 <li><a href="PPolicy.html">Privacy Policy</a> | </li>
-</ul>
+</ul> -->
+
+<!-- BootStrap Nav -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="https://www.svgrepo.com/show/440630/navimenu.svg">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="#">Policy</a>
+        </li> 
+</nav>
+
 </div> <!--header bottom -->
 </div> <!-- header -->
 <div id="main">
@@ -69,6 +97,7 @@ iaculis arcu.</p>
 </li>
 </ul>
 </div> 
+
 <!--inner -->
 </div> <!-- content -->
 <div id="sidebar">
@@ -83,7 +112,8 @@ iaculis arcu.</p>
 </div>
 </form></div>
 <div id="inner">
-<h3>Coming Events</h3>
+  <br> 
+<!-- Original Coming Events <h3>Coming Events</h3>
 <ul>
 <li> <span class="date">10 Apr</span>  -<br />Seattle dog show</li>
 <li> <span class="date">13 Apr</span>  -<br />World dog Skateboarding Championship</li>
@@ -94,7 +124,22 @@ iaculis arcu.</p>
 <h3>Food of the Month</h3>
 <h4>The Big Bone is it good for you</h4>
 <p>Eti bibendum mauris nec nulla. Nullam cursus ullamcorper
-quam. Sed cursus vestibulum leo.</p>
+quam. Sed cursus vestibulum leo.</p> -->
+
+<!-- Card for Coming Events -->
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Coming Events</h5>
+    <ul>
+      <li> <span class="date">10 Apr</span>  -<br />Seattle dog show</li>
+      <li> <span class="date">13 Apr</span>  -<br />World dog Skateboarding Championship</li>
+      <li> <span class="date">21 Apr </span> -<br />Hotdog dog eating Championship</li>
+      </ul>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 
 </div> <!--inner -->
 </div> <!-- sidebar -->
