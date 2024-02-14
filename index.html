@@ -14,21 +14,57 @@
             width: 100%;
             height: auto;
         }
-
-
-        /* CSS media Queries for Tablet */
-@media screen and (max-width: 768px) {
-    .board {
-        width: 45%;
-    }
+        
+        footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #999999;
+  color: white;
 }
 
-/* CSS media Queries for Smartphone */
-@media screen and (max-width: 480px) {
-    .board {
-        width: 100%;
-    }
+/* CSS for Hero image */
+#wrapper {
+  width: 100%;
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
+#header {
+  text-align: center;
+}
+
+#header img {
+  max-width: 100%;
+  height: auto;
+}
+
+#header-bottom {
+  margin-top: 20px;
+}
+
+#tagline {
+  font-size: 18px;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) { /* For tablets */
+  #header img {
+    width: 90%; /* Adjust as needed */
+  }
+}
+
+@media only screen and (max-width: 480px) { /* For phones */
+  #header img {
+    width: 80%; /* Adjust as needed */
+  }
+
+  #tagline {
+    font-size: 16px; /* Adjust as needed */
+  }
+}
+
 
 </style>
 </head>
@@ -164,18 +200,6 @@ quam. Sed cursus vestibulum leo.</p>
   <small>Copyright @ WéB1 2024 _ The Dog Freaks _ All rights reserved.</small>
 </footer>
 
-<!-- JS for menu toggle -->
-<script>
-  // Get the toggle button and navigation links
-  const toggleBtn = document.querySelector('.toggle-btn');
-  const navLinks = document.querySelector('.nav-links');
-
-  // Add event listener to toggle button
-  toggleBtn.addEventListener('click', function() {
-      // Toggle the 'show' class on navigation links
-      navLinks.classList.toggle('show');
-  });
-</script>
 
 </body>
 </html>
