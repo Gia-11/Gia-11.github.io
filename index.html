@@ -23,6 +23,16 @@
 }
 
 /* CSS for Hero image */
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #999;
+	color: white;
+	background-image: url(img/bg.jpg);
+	background-repeat: repeat-x;
+	font: small Arial, Helvetica, Verdana, sans-serif;
+
+}
 #wrapper {
   width: 100%;
   max-width: 1200px; /* Adjust max-width as needed */
@@ -48,6 +58,54 @@
   font-size: 18px;
 }
 
+
+#header-bottom{
+border-top: 1px solid #990000;
+border-bottom: 1px solid #990000;
+}
+
+#main {
+  width: 100%;
+  max-width: 1200px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mainfeature {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#mainfeature h2 {
+  font-size: 24px;
+}
+
+#mainfeature p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#mainfeature .more a {
+  color: blue;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
 /* Media Queries */
 @media only screen and (max-width: 768px) { /* For tablets */
   #header img {
@@ -64,8 +122,6 @@
     font-size: 16px; /* Adjust as needed */
   }
 }
-
-
 </style>
 </head>
 
@@ -106,12 +162,6 @@
   </header>
 
 
-<!-- <ul id="menu">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="contact.html">Contact Us</a></li>
-  <li><a href="aboutus.html">About Us</a></li>
-  <li><a href="PPolicy.html">Privacy Policy</a></li>
-</ul> -->
 </div> <!--header bottom -->
 </div> <!-- header -->
 
