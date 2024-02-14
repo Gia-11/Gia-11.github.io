@@ -15,25 +15,6 @@
             height: auto;
         }
 
-  /* CSS for Nav */
-        ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-a {
-  text-decoration: none;
-  color: #333;
-}
-        
-
 
 </style>
 </head>
@@ -46,11 +27,17 @@ a {
   <div id="header-bottom"> 
     <p id="tagline">The Home of everything about DOGS from dogs</p>
 <p></p>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="contact.html">Contact Us</a></li>
-<li><a href="aboutus.html">About Us</a></li>
-<li><a href="PPolicy.html">Privacy Policy</a></li>
+<div class="menu-icon" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<ul id="menu">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+  <li><a href="aboutus.html">About Us</a></li>
+  <li><a href="PPolicy.html">Privacy Policy</a></li>
 </ul>
 </div> <!--header bottom -->
 </div> <!-- header -->
