@@ -9,6 +9,20 @@
 <link href="dog_styles.css" rel="stylesheet" type="text/css" />
 
 <style>
+/* CSS for log adjustment */
+.logo-link {
+  position: fixed;
+  top: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  z-index: 9999; /* Ensure logo is above other content */
+}
+
+.logo {
+  width: 100px; /* Adjust width as needed */
+  height: auto;
+}
+
+
   /* Hero image css - not sure to target header or img */
   .header {
             width: 100%;
@@ -97,8 +111,7 @@ border-bottom: 1px solid #990000;
 #mainfeature .more a {
   color: blue;
   text-decoration: none;
-}
-
+} 
 
 
 /* Media Queries */
@@ -115,6 +128,13 @@ border-bottom: 1px solid #990000;
   #mainfeature p {
     font-size: 14px; 
   }
+
+  .logo {
+    width: 80px; /* Adjust as needed */
+  }
+
+
+
 
 
 @media only screen and (max-width: 480px) { /* For phones */
@@ -135,6 +155,12 @@ border-bottom: 1px solid #990000;
     font-size: 12px; 
   }
 
+  .logo {
+    width: 60px; /* Adjust as needed */
+  }
+
+
+
 
 
 
@@ -142,7 +168,7 @@ border-bottom: 1px solid #990000;
 </head>
 
 <body>
-  <a href="index.html">
+  <a href="index.html" class="logo-link">
     <img src="images/2thepoint.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
     </a>
 
