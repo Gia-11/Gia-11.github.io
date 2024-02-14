@@ -16,10 +16,28 @@
         }
 
 
+        /* CSS media Queries for Tablet */
+@media screen and (max-width: 768px) {
+    .board {
+        width: 45%;
+    }
+}
+
+/* CSS media Queries for Smartphone */
+@media screen and (max-width: 480px) {
+    .board {
+        width: 100%;
+    }
+}
+
 </style>
 </head>
 
 <body>
+  <a href="index.html">
+    <img src="images/2thepoint.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
+    </a>
+
 <div id="wrapper">
 <div id="header">
   <div align="center"><img src="img/png/logo.png" width="800" height="308" alt="dogfreaks" />
@@ -33,12 +51,31 @@
   <div></div>
 </div>
 
-<ul id="menu">
+<header>
+
+  <nav class="navbar">
+      <button class="toggle-btn">Menu</button>
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="support.html">Support</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+  
+  
+  
+  </header>
+
+
+<!-- <ul id="menu">
   <li><a href="index.html">Home</a></li>
   <li><a href="contact.html">Contact Us</a></li>
   <li><a href="aboutus.html">About Us</a></li>
   <li><a href="PPolicy.html">Privacy Policy</a></li>
-</ul>
+</ul> -->
 </div> <!--header bottom -->
 </div> <!-- header -->
 
@@ -122,6 +159,23 @@ quam. Sed cursus vestibulum leo.</p>
 </div> <!-- sidebar -->
 </div> <!--main -->
 </div>  <!--wrapper -->
+
+<footer>
+  <small>Copyright @ WéB1 2024 _ The Dog Freaks _ All rights reserved.</small>
+</footer>
+
+<!-- JS for menu toggle -->
+<script>
+  // Get the toggle button and navigation links
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const navLinks = document.querySelector('.nav-links');
+
+  // Add event listener to toggle button
+  toggleBtn.addEventListener('click', function() {
+      // Toggle the 'show' class on navigation links
+      navLinks.classList.toggle('show');
+  });
+</script>
 
 </body>
 </html>
