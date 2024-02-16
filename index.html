@@ -82,7 +82,7 @@ border-bottom: 1px solid #990000;
 /* CSS Maxxie Says */
 #main {
   width: 100%;
-  max-width: 1200px; 
+  max-width: 1500px; 
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
@@ -113,10 +113,37 @@ border-bottom: 1px solid #990000;
   text-decoration: none;
 }
 
+.inner {
+  background-color: #999; /* Light blue background color */
+  padding: 20px;
+  margin-bottom: 20px;
+}
 
+/* Styles for heading */
+.inner h3 {
+  margin-top: 0;
+}
 
+/* Styles for form */
+.inner form {
+  margin-top: 10px;
+}
 
+/* Styles for list */
+.inner ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
 
+@media only screen and (max-width: 1024px) {
+
+}
+  .inner {
+    display: flex;
+    flex-direction: column;
+    background-color: #999; 
+    padding: 15px;
+  }
 
 
 /* Media Queries */
@@ -136,6 +163,7 @@ border-bottom: 1px solid #990000;
 
   .logo {
     width: 80px; /* Adjust as needed */
+    border-radius: 50px;
   }
 
 
@@ -162,6 +190,10 @@ border-bottom: 1px solid #990000;
     width: 60px; /* Adjust as needed */
   }
 
+  .inner {
+    padding: 10px;
+  }
+
 
 
 
@@ -172,7 +204,7 @@ border-bottom: 1px solid #990000;
 
 <body>
   <a href="index.html" class="logo-link">
-    <img src="images/2thepoint.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
+    <img src="img/Dog Freaks.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
     </a>
 
 <div id="wrapper">
@@ -256,7 +288,8 @@ iaculis arcu.</p>
 <!--inner -->
 </div> <!-- content -->
 
-<div id="sidebar">
+<!-- Side bar adjustments -->
+<!-- <div id="sidebar"> -->
   <div class="inner">
     <h3>Enter email for weekly tips</h3>
     <form method="post" action="thankyou.html" id="regform">
@@ -272,9 +305,9 @@ iaculis arcu.</p>
   <div class="inner">
     <h3>Coming Events</h3>
     <ul>
-      <li><span class="date">10 Apr</span> - Seattle dog show</li>
-      <li><span class="date">13 Apr</span> - World dog Skateboarding Championship</li>
-      <li><span class="date">21 Apr</span> - Hotdog dog eating Championship</li>
+      <li><span class="date">10 Apr</span> -<br /><a href="">Seattle dog show</a></li>
+      <li><span class="date">13 Apr</span> -<br /><a href="">World dog Skateboarding Championship</a></li>
+      <li><span class="date">21 Apr</span> -<br /><a href="">Hotdog dog eating Championship</a></li>
     </ul>
   </div>
 
@@ -282,6 +315,7 @@ iaculis arcu.</p>
     <h3>Food of the Month</h3>
     <h4>The Big Bone is it good for you</h4>
     <p>Eti bibendum mauris nec nulla. Nullam cursus ullamcorper quam. Sed cursus vestibulum leo.</p>
+    <p><a href="">more</a></p>
   </div>
 </div>
 
