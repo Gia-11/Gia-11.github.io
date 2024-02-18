@@ -138,13 +138,30 @@ border-bottom: 1px solid #990000;
   padding-left: 20px;
 }
 
+/* CSS for 2 grid boards */
+.board-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.board {
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #844655;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
 @media only screen and (max-width: 1024px) {
 
 }
   .inner {
     display: flex;
     flex-direction: column;
-    background-color: #999; 
+    background-color: #245185; 
     padding: 15px;
   }
 
@@ -236,60 +253,32 @@ border-bottom: 1px solid #990000;
       </ul>
   </nav>
   </header>
-
-
 </div> <!--header bottom -->
 </div> <!-- header -->
 
-<div id="main">
-<div id="content">
-<div id="mainfeature">
-<h2>Maxxie Says</h2>
-<p>Maxxie tells us how a change of dog food has given his fur a new look.</p>
-<p class="more"><a href="mainstory.html">Read More</a></p>
-</div> <!--mainfeature -->
-<div class="inner">
-<h2>Recent Features</h2>
-<ul class="features">
-<li>
-<h3><a href="">Eating your weight in hotdogs</a></h3>
-<img src="img/lachlan.jpg" width="54" height="63" alt="chihuaha" />
+<!-- Div Section for Recent Features -->
+<section>
+  <div class="board-container">
+      <div class="board">
+          <h2><a href="">Eating your weight in hotdogs</a></h2>
+          <img src="img/lachlan.jpg" width="54" height="63" alt="chihuaha" />
 <p class="author">Chihuahua Joe</p>
 <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent hendrerit
 iaculis arcu.</p>
 <p class="more"><a href="joestory.html">Full Story</a></p>
-</li>
-<li>
-<h3><a href="">Skateboarding super tips to get you started</a></h3>
-<img src="img/jules.jpg" width="51" height="61" alt="bulldog" />
+      </div>
+
+      <div class="board">
+          <h2><a href="">Skateboarding super tips to get you started</a></h2>
+          <img src="img/jules.jpg" width="51" height="61" alt="bulldog" />
 <p class="author">Earnne the bulldog</p>
 <p>Vestibulum ante ipsum primis in faucibus orci luctus et
 ultrices posuere cubilia Curae; Praesent hendrerit
 iaculis arcu.</p>
 <p class="more"><a href="earnnestory.html">Full Story</a></p>
-</li>
-<li>
-<h3><a href="">The Complete  Survival Guide for owners</a></h3>
-<img src="img/mark.jpg" width="50" height="67" alt="big dog" />
-<p class="author">Buster the &quot;Big Dog&quot;</p>
-<p>Vestibulum ante ipsum primis in faucibus orci luctus et
-ultrices posuere cubilia Curae; Praesent hendrerit
-iaculis arcu.</p>
-<p class="more"><a href="busterstory.html">Full Story</a></p>
-</li>
-<li>
-<h3><a href="">Five Tricks You Didn't Even Know You Knew</a></h3>
-<img src="img/mackie.jpg" width="57" height="57" alt="mackie" />
-<p class="author">Makkie</p>
-<p>Vestibulum ante ipsum primis in faucibus orci luctus et 
-ultrices posuere cubilia Curae; Praesent hendrerit
-iaculis arcu.</p>
-<p><a href="makkiestory.html">Full Story</a></p>
-</li>
-</ul>
-</div> 
-<!--inner -->
-</div> <!-- content -->
+      </div>
+  </div>
+</section>
 
 <!-- Side bar adjustments -->
 <!-- <div id="sidebar"> -->
