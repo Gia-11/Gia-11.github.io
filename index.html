@@ -79,48 +79,29 @@ border-top: 1px solid #990000;
 border-bottom: 1px solid #990000;
 }
 
-/* CSS Maxxie Says */
-#main {
-  width: 100%;
-  max-width: 1500px; 
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+/* CSS for Maxxie Says */
+.all-browsers {
+  margin: 0;
+  padding: 5px;
+  background-color: lightgray;
 }
 
-#content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.all-browsers > h1, .browser {
+  margin: 10px;
+  padding: 5px;
 }
 
-#mainfeature {
-  text-align: center;
-  margin-bottom: 20px;
+.browser > h1 {
+  margin: 4px;
+  font-size: 90%;
+  background-color: lightgray;
 }
-
-#mainfeature h2 {
-  font-size: 24px;
-}
-
-#mainfeature p {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-#mainfeature .more a {
-  color: blue;
-  text-decoration: none;
-} 
 
 .inner {
   background-color: #999; /* Light blue background color */
   padding: 20px;
   margin-bottom: 20px;
 }
-
-
-
 
 /* Styles for heading */
 .inner h3 {
@@ -255,6 +236,15 @@ border-bottom: 1px solid #990000;
   </header>
 </div> <!--header bottom -->
 </div> <!-- header -->
+
+<!--Maxie Says -->
+<article class="all-browsers"></article>
+<h1>Maxxie Says</h1>
+<article class="browser"></article>
+  <p>Maxxie tells us how a change of dog food has given his fur a new look.</p>
+  </article>
+  <p class="more"><a href="mainstory.html">Read More</a></p>
+  
 
 <!-- Div Section for Recent Features -->
 <section>
