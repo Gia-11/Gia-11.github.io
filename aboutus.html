@@ -170,6 +170,10 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+
 
 /* Media Queries */
 @media only screen and (max-width: 1024px) {
@@ -250,13 +254,19 @@ input[type=submit]:hover {
   </header>
 </div> <!--header bottom -->
 </div> <!-- header -->
+<br>
 
-<!--Maxie Says -->
+<!--About Us -->
 <article class="all-browsers">
-  <h1>Maxxie Says</h1>
+  <h1>About Us</h1>
   <article class="browser">
-    <h2></h2>
-    <p>Maxxie tells us how a change of dog food has given his fur a new look.</p>
+    <h2>Jedi Academy</h2>
+    <p>You are a part of the Rebel Alliance and a traitor! Take her away! Your eyes can deceive you. 
+      Don't trust them. The more you tighten your grip, Tarkin, the more star systems will slip through your fingers. 
+      The more you tighten your grip, Tarkin, the more star systems will slip through your fingers. 
+      I suggest you try it again, Luke. This time, let go your conscious self and act on instinct. 
+      Don't underestimate the Force.
+    </p>
     <p class="more"><a href="mainstory.html">Read More</a></p>
   </article>
 <article class="all-browsers"></article>
@@ -264,83 +274,6 @@ input[type=submit]:hover {
 <article class="browser"></article>
   <p></p>
   </article>
-
- <!--TESTING Contact Form -->
- <div class="inner">
-  <h2>Contact Information</h2>
-  <p>Phone: 999-999-9999 </p>
-  <p>Email: dogquestions@thedogfreaks.com</p>
-</div>
-
-<div class="container">
-  <h3>Contact Form</h3>
-  <form id="contactForm" action="#" method="POST">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-
-    <label for="country">Country</label>
-    <select id="country" name="country" required>
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-</div>
-
-
-
- <!--JavaScript for Contact Form -->
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent default form submission
-    
-    // Fetch form values
-    var firstName = document.getElementById("fname").value;
-    var lastName = document.getElementById("lname").value;
-    var country = document.getElementById("country").value;
-    var subject = document.getElementById("subject").value;
-  
-    
-    // Create a data object to send with AJAX or fetch
-    var formData = {
-      firstname: firstName,
-      lastname: lastName,
-      country: country,
-      subject: subject
-    };
-  
-    // Here you can make an AJAX request to send form data to the server
-    // Example using fetch API
-    fetch('/submit_form.php', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    })
-    .then(response => {
-      if (response.ok) {
-        alert('Form submitted successfully');
-        // Optionally reset the form
-        document.getElementById("contactForm").reset();
-      } else {
-        throw new Error('Form submission failed');
-      }
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('Form submission failed');
-    });
-  });
-  </script>
   
 <!-- Removed sidebar -->
 
