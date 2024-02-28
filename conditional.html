@@ -24,7 +24,14 @@
         if (luckyNumber == 7 ) { // a conditional statement to check what the visitor typed into the prompt dialog box - the double equals signs (==), which compare two values
           document.write("<p>Hey, 7 is my lucky number too!</p>"); // message
 
-        } else { 
+        } 
+        else if (luckyNumber == 13 || luckyNumber == 24) { 
+          document.write("<p>Wooh. " +
+          luckyNumber + "? That's an unlucky number!<
+          p>"); 
+        }
+        
+        else { 
           document.write("<p>The number " + luckyNumber + " is lucky for you!</p>"); // The else clause provides a backup message, so if the visitor doesn’t type 7, she’ll see a different message that includes her lucky number
         }
           </script> 
