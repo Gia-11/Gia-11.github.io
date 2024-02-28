@@ -6,7 +6,7 @@
 <link href="../_css/site.css" rel="stylesheet">
 
 <script>
-  var luckyNumber = prompt('What is your lucky number?','');
+  var luckyNumber = prompt('What is your lucky number?',''); // prompting vistitor for a number
 </script>
 
 </head>
@@ -21,9 +21,11 @@
       <h1>Using Conditional Statements</h1>
 
       <script>
-        if (luckyNumber == 7 ) {
-          document.write("<p>Hey, 7 is my lucky number too!</p>");
+        if (luckyNumber == 7 ) { // a conditional statement to check what the visitor typed into the prompt dialog box - the double equals signs (==), which compare two values
+          document.write("<p>Hey, 7 is my lucky number too!</p>"); // message
 
+        } else { 
+          document.write("<p>The number " + luckyNumber + " is lucky for you!</p>"); // The else clause provides a backup message, so if the visitor doesn’t type 7, she’ll see a different message that includes her lucky number
         }
           </script> 
 
