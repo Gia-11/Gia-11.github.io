@@ -7,6 +7,11 @@
 
 <script>
   var luckyNumber = prompt('What is your lucky number?',''); // prompting vistitor for a number
+  luckyNumber = parseInt(luckyNumber, 10);
+  if (isNaN(luckyNumber)) {
+ luckyNumber = prompt('Please, tell me your lucky number.','');
+}
+
 </script>
 
 </head>
