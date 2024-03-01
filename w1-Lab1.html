@@ -67,7 +67,7 @@
             var age = document.getElementById("age").value;
             //alert("Name= " + name + " Age= " + age); // used to test validation of name and age
             if(name == "" || name == null){ //checking for null or empty
-                alert("We need your name please");
+                resultsMsg("We need your name please");
             }else{
                 //alert("Thank you " + name); // used for correct name message 
                 if(age == "" || age == null || isNaN(age)){
