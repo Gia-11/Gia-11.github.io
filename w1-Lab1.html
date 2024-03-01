@@ -70,6 +70,11 @@
                 alert("We need your name please");
             }else{
                 //alert("Thank you " + name); // used for correct name message 
+                if(age == "" || age == null || isNaN(age)){
+                    alert("Please enter a number for your age");
+                }else{
+                    alert("thanks " + name + "You are" + age + "--yeah, right!");
+                }
             }
         }
     </script>
