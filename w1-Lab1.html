@@ -61,57 +61,57 @@
     </style>
 
     <script type="text/javascript">
-        function validateForm(){
+        function validateForm() {
             // alert("Success"); // used to test validation
             var name = document.getElementById("name").value;
             var age = document.getElementById("age").value;
             //alert("Name= " + name + " Age= " + age); // used to test validation of name and age
-            if(name == "" || name == null){ //checking for null or empty
+            if (name == "" || name == null) { //checking for null or empty
                 resultsMsg("We need your name please");
-            }else{
+            } else {
                 //alert("Thank you " + name); // used for correct name message 
-                if(age == "" || age == null || isNaN(age)){
+                if (age == "" || age == null || isNaN(age)) {
                     resultsMsg("Please enter a number for your age");
-                }else{
+                } else {
                     //alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
-                    if(!getSkill()){
+                    if (!getSkill()) {
                         resultsMsg("Please select a skill");
-                    }else{
-                        moreMSG("Success, you selected " + getSkill()); // used for skill selected and message
+                    } else {
+                        moreMSG("Success " + name + ", you selected " + getSkill()); // used for skill selected and message
                     } // end else
                 }
             }
         } // end function
 
-        function getSkill(){
+        function getSkill() {
             var isChecked = false; // assume no button is checked
             var theSelection;
             var skills = document.getElementsByName('skillset'); // returns an array-- look it up :-)
-            for (var i=0; i< skills.length; i++){
-                if(skills[i].checked){ // checks for attribute being true
+            for (var i = 0; i < skills.length; i++) {
+                if (skills[i].checked) { // checks for attribute being true
                     isChecked = true;
                     theSelection = skills[i].value;
                     break; // leave the loop since only one item can be checked
                 } // end if
             } // end for
-            if(isChecked){
+            if (isChecked) {
                 return theSelection;
-            }else{
+            } else {
                 return false;
             } // end else
         } //end function
 
-        function resultsMsg(s){ // 1st set of messages
-            var resultsBox = document.getElementById("results"); 
+        function resultsMsg(s) { // 1st set of messages
+            var resultsBox = document.getElementById("results");
             // reponds to blank by overwriting
-            resultsBox.innerHTML=s;
+            resultsBox.innerHTML = s;
         } //end function
 
-        function moreMSG(s){ // for last more messages
-    var resultsBox = document.getElementById("more"); 
-    // reponds to blank by overwriting
-    resultsBox.innerHTML=s;
-} //end function
+        function moreMSG(s) { // for last more messages
+            var resultsBox = document.getElementById("more");
+            // reponds to blank by overwriting
+            resultsBox.innerHTML = s;
+        } //end function
 
     </script>
 
@@ -127,7 +127,7 @@
             <input type="text" id="name" name="name">
         </label>
         <br> <!-- new line here -->
-        <label>Your Age: &nbsp; <!-- non breaking speace / better to do in CSS --> 
+        <label>Your Age: &nbsp; <!-- non breaking speace / better to do in CSS -->
             <input type="text" id="age" name="age">
         </label>
         <br> <!-- new line here -->
@@ -137,7 +137,8 @@
         <input type="radio" name="skillset" value="programmer">Programmer<br>
         <input type="radio" name="skillset" value="artist">Artist<br>
 
-        <input type="button" value="Submit" onclick="validateForm();"> &nbsp; &nbsp; <input type="reset" value="Clear Form"> <!-- results will submit when button clicked -->
+        <input type="button" value="Submit" onclick="validateForm();"> &nbsp; &nbsp; <input type="reset"
+            value="Clear Form"> <!-- results will submit when button clicked -->
     </form> <!-- end create form -->
 
     <div id="results"></div>
