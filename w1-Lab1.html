@@ -71,11 +71,11 @@
             }else{
                 //alert("Thank you " + name); // used for correct name message 
                 if(age == "" || age == null || isNaN(age)){
-                    alert("Please enter a number for your age");
+                    resultsMsg("Please enter a number for your age");
                 }else{
                     alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
                     if(!getSkill()){
-                        alert("Please select a skill");
+                        resultsMsg("Please select a skill");
                     }else{
                         alert("Success, you selected " + getSkill()); // used for skill selected and message
                     } // end else
