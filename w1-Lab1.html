@@ -81,7 +81,26 @@
                     } // end else
                 }
             }
-        }
+        } // end function
+
+        function getSkill(){
+            var isChecked = false; // assume no button is checked
+            var theSelection;
+            var skills = document.getElementsByName('skillset'); // returns an array-- look it up :-)
+            for (var i=0; i< skills.length; i++){
+                if(skills[i].checked){ // checks for attribute being true
+                    isChecked = true;
+                    theSelection = skills[i].value;
+                    break; // leave the loop since only one item can be checked
+                } // end if
+            } // end for
+            if(isChecked){
+                return theSelection;
+            }else{
+                return false;
+            } // end else
+        } //end function
+
     </script>
 
 </head>
