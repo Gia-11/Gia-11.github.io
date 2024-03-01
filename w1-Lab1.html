@@ -73,7 +73,12 @@
                 if(age == "" || age == null || isNaN(age)){
                     alert("Please enter a number for your age");
                 }else{
-                    alert("thanks " + name + "You are" + age + "--yeah, right!");
+                    alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
+                    if(!getSkill()){
+                        alert("Please select a skill");
+                    }else{
+                        alert("Success, you selected " + getSkill()); // used for skill selected and message
+                    }
                 }
             }
         }
@@ -95,6 +100,7 @@
             <input type="text" id="age" name="age">
         </label>
         <br> <!-- new line here -->
+
         <input type="radio" name="skillset" value="designer">Designer<br>
         <input type="radio" name="skillset" value="developer">Developer<br>
         <input type="radio" name="skillset" value="programmer">Programmer<br>
