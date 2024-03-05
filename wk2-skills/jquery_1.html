@@ -8,6 +8,7 @@
         width: 200px;
         height: 200px;
         display: block;
+        display: none;
     }
 </style>
 
@@ -17,10 +18,16 @@
         $('a').click(function() {
             //$('#box').hide('slow');
             //$('#box').fadeOut();
-            $('#box').slideUp(2000);
+            //$('#box').slideUp(2000);
+            //$('#box').slideDown(2000);
+            //$('#box').fadeIn(2000);
+            $('#box').toggle('slow');
+
+
         });
 
     });
+
 </script>
 
 </head>
