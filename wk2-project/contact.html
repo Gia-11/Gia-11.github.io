@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OneWheel</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="WGD310-Project">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="SPate"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style type="text/css">
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            color: #900;
+            margin-left: 20px;
+        }
+        div#results {
+            background-color: #FF6;
+            height: auto;
+            width: 500px;
+            border: 1px solid red;
+            padding: 10px;
+            margin-left: 20px;
+            -moz-box-shadow: 10px 10px 5px #888;
+            -webkit-box-shadow: 10px 10px 5px #888;
+            box-shadow: 10px 10px 5px #888;
+            border-radius: 7px;
+        }
+        div#more {
+            background-color: #39F;
+            height: auto;
+            width: 500px;
+            border: 1px solid #036;
+            padding: 10px;
+            margin-left: 20px;
+            margin-top: 20px;
+            -moz-box-shadow: 10px 10px 5px #888;
+            -webkit-box-shadow: 10px 10px 5px #888;
+            box-shadow: 10px 10px 5px #888;
+            color: #CF0;
+        }
+        #form1 {
+            padding: 10px;
+            width: 500px;
+            border-style: solid;
+            border-color: #063;
+            border-radius: 15px;
+            -moz-box-shadow: 10px 10px 5px #888;
+            -webkit-box-shadow: 10px 10px 5px #888;
+            box-shadow: 10px 10px 5px #888;
+            background-color: #CFF;
+            margin: 20px;
+        }
+    </style>
+
+<script type="text/javascript">
+    function validateForm() {
+        // alert("Success"); // used to test validation
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        //alert("Name= " + name + " Age= " + age); // used to test validation of name and age
+        if (name == "" || name == null) { //checking for null or empty
+            resultsMsg("We need your name please");
+        } else {
+            //alert("Thank you " + name); // used for correct name message 
+            if (age == "" || age == null || isNaN(age)) {
+                resultsMsg("Please enter a number for your age");
+            } else {
+                //alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
+                if (!getSkill()) {
+                    resultsMsg("Please select a skill");
+                } else {
+                    moreMSG("Success " + name + ", you selected " + getSkill()); // used for skill selected and message
+                } // end else
+            }
+        }
+    } // end function
+    function getSkill() {
+        var isChecked = false; // assume no button is checked
+        var theSelection;
+        var skills = document.getElementsByName('skillset'); // returns an array-- look it up :-)
+        for (var i = 0; i < skills.length; i++) {
+            if (skills[i].checked) { // checks for attribute being true
+                isChecked = true;
+                theSelection = skills[i].value;
+                break; // leave the loop since only one item can be checked
+            } // end if
+        } // end for
+        if (isChecked) {
+            return theSelection;
+        } else {
+            return false;
+        } // end else
+    } //end function
+    function resultsMsg(s) { // 1st set of messages
+        var resultsBox = document.getElementById("results");
+        // reponds to blank by overwriting
+        resultsBox.innerHTML = s;
+    } //end function
+    function moreMSG(s) { // for last more messages
+        var resultsBox = document.getElementById("more");
+        // reponds to blank by overwriting
+        resultsBox.innerHTML = s;
+    } //end function
+</script>
+</head>
+
+<body>
+
+    <p>First Paragraph</p>
+    <p>Second Paragraph</p>
+
+    <form name="form1" id="form1" action="" method="post">
+        <label>First Name:
+            <input type="text" id="name" name="name">
+        </label>
+        <br> <!-- new line here -->
+        <label>Your Age: &nbsp; <!-- non breaking speace / better to do in CSS -->
+            <input type="text" id="age" name="age">
+        </label>
+        <br> <!-- new line here -->
+
+        <input type="radio" name="skillset" value="designer">Designer<br>
+        <input type="radio" name="skillset" value="developer">Developer<br>
+        <input type="radio" name="skillset" value="programmer">Programmer<br>
+        <input type="radio" name="skillset" value="artist">Artist<br>
+
+        <input type="button" value="Submit" onclick="validateForm();"> &nbsp; &nbsp; <input type="reset"
+            value="Clear Form"> <!-- results will submit when button clicked -->
+    </form> <!-- end create form -->
+
+    <div id="results"></div>
+    <div id="more">Testing the results</div>
+</body>
+<br>
+
+<footer>
+    <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
+</footer>
+
+</html>
+</body>
