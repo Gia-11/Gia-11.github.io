@@ -65,10 +65,24 @@
 
         body {
             background-image: url(img/tire.png);
-            background-repeat: no-repeat;
+           
             background-attachment: fixed;  
             background-size: cover;
         }
+
+        /* CSS for image tablets */
+        @media only screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* or any other desired property */
+    }
+}
+    
+    /* CSS for image phones */
+    @media only screen and (max-width: 480px) {
+    body {
+        background-size: contain; /* or any other desired property */
+    }
+}
 
         footer {
             text-align: center;
