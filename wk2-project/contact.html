@@ -238,7 +238,6 @@ input[type="reset"] {
         // alert("Success"); // used to test validation
         var name = document.getElementById("name").value;
         var age = document.getElementById("age").value;
-        var email = document.getElementById("email").value;
         //alert("Name= " + name + " Age= " + age); // used to test validation of name and age
         if (name == "" || name == null) { //checking for null or empty
             resultsMsg("We need your name please");
@@ -318,9 +317,9 @@ input[type="reset"] {
             <input type="text" id="age" name="age">
         </label>
         <br> <!-- new line here -->
-        <label>Email Address:
-            <input type="email" id="email" name="email"> <!-- Add email input field -->
-        </label>
+        <!-- <label>Email Address:
+            <input type="email" id="email" name="email"> 
+        </label> -->
         <br>
 
         <input type="radio" name="skillset" value="never">Never<br>
