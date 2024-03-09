@@ -8,7 +8,7 @@ body {
         /* Responsive settings */
         body {
             font-family: Arial, sans-serif;
-            background-color: #ddd1c7;
+            background-color: #cccccc;
         }
         
         header {
@@ -38,7 +38,7 @@ body {
         footer {
             text-align: center;
             padding: 3px;
-            background-color: #483c32;
+            background-color: #003366;
             color: white;
         }
 
