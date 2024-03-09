@@ -228,6 +228,8 @@ input[type="reset"] {
                     moreMSG("Success " + name + ", you selected " + getSkill()); // used for skill selected and message
                 } // end else
             }
+            if(email==""||email==null){
+       resultsMsg("Email is required too");
         }
     } // end function
     function getSkill() {
@@ -257,6 +259,12 @@ input[type="reset"] {
         // reponds to blank by overwriting
         resultsBox.innerHTML = s;
     } //end function
+
+}
+
+
+
+
 
 </script>
 </head>
