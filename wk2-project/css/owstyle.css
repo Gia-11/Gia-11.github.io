@@ -1,0 +1,43 @@
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+        /* Responsive settings */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .logo {
+            width: 100px; /* Adjust as needed */
+        }
+        
+        .navbar {
+            display: inline-block;
+        }
+        
+        .nav-links {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .nav-links li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        /* Footer css */
+        footer {
+            text-align: center;
+            padding: 3px;
+            background-color: DarkSalmon;
+            color: white;
+        }
+
