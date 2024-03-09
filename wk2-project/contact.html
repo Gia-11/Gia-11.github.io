@@ -238,6 +238,7 @@ input[type="reset"] {
         // alert("Success"); // used to test validation
         var name = document.getElementById("name").value;
         var age = document.getElementById("age").value;
+        var email = document.getElementById("email").value;
         //alert("Name= " + name + " Age= " + age); // used to test validation of name and age
         if (name == "" || name == null) { //checking for null or empty
             resultsMsg("We need your name please");
@@ -253,7 +254,13 @@ input[type="reset"] {
                     moreMSG("Interesting " + name + ", you selected " + getSkill()); // used for skill selected and message
                 } // end else
             }
+
+
     } // end function
+ 
+    // email validation
+
+    // end email validation
 
     function getSkill() {
         var isChecked = false; // assume no button is checked
