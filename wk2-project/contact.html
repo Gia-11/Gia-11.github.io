@@ -234,61 +234,56 @@ input[type="reset"] {
     </style>
 
 <script type="text/javascript">
-    function validateForm(){
-    var name=document.getElementById("name").value;
-    var email=document.getElementById("email").value;
-    var phone=document.getElementById("phone").value;
-    if(name==""||name==null){//checking for null or empty string
-    resultsMsg("Please fill out your name");
-    moreMsg(" Select a skill");    
-        }else{ 
-     if(email==""||email==null){
-       resultsMsg("Email is required too"); 
-         moreMsg("Just select a skill");    
-        }else{
-        if(phone==""||phone==null){
-       resultsMsg("Please fill out your phone number"); 
-         moreMsg("Skill is still not selected");    
-        }else{    
-     //action("thanks"+name+"You are"+age+"--That sounds about right"); 
-      if(!getSkill()){
-      resultsMsg("Select a skill please");
-        moreMsg("You really need to select a skill");      
-      }else{
-    resultsMsg("Finally!, you selected " + getSkill());
-     moreMsg("Now we're talking!");         
-      }//end else           
-     }//end function
-    }
+    function validateForm() {
+        // alert("Success"); // used to test validation
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("age").value;
+        var email = document.getElementById("email").value;
+        //alert("Name= " + name + " Age= " + age); // used to test validation of name and age
+        if (name == "" || name == null) { //checking for null or empty
+            resultsMsg("We need your name please");
+        } else {
+            //alert("Thank you " + name); // used for correct name message 
+            if (age == "" || age == null || isNaN(age)) {
+                resultsMsg("Please enter a number for your age");
+            } else {
+                //alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
+                if (!getSkill()) {
+                    resultsMsg("Please select a skill level");
+                } else {
+                    moreMSG("Interesting " + name + ", you selected " + getSkill()); // used for skill selected and message
+                } // end else
+            }
+    } // end function
+
+    function getSkill() {
+        var isChecked = false; // assume no button is checked
+        var theSelection;
+        var skills = document.getElementsByName('skillset'); // returns an array-- look it up :-)
+        for (var i = 0; i < skills.length; i++) {
+            if (skills[i].checked) { // checks for attribute being true
+                isChecked = true;
+                theSelection = skills[i].value;
+                break; // leave the loop since only one item can be checked
+            } // end if
+        } // end for
+        if (isChecked) {
+            return theSelection;
+        } else {
+            return false;
+        } // end else
+    } //end function
+    function resultsMsg(s) { // 1st set of messages
+        var resultsBox = document.getElementById("results");
+        // reponds to blank by overwriting
+        resultsBox.innerHTML = s;
+    } //end function
+    function moreMSG(s) { // for last more messages
+        var resultsBox = document.getElementById("more");
+        // reponds to blank by overwriting
+        resultsBox.innerHTML = s;
+    } //end function
 }
-}
-function getSkill(){
-   var isChecked=false;//assume no button is checked
-    var theSelection;
-    var skills=document.getElementsByName('skillset');//returns an array
-    for(var i=0;i<skills.length;i++){
-        if(skills[i].checked){
-            isChecked=true;
-            theSelection=skills[i].value;
-            break;//leave the loop since only one can be checked
-            }//end if
-    }//end for
-    if(isChecked){
-       return theSelection;
-    }else{
-     return false;   
-    }//end false
-        }//end function
-function resultsMsg(s){
-   var resultsBox=document.getElementById("results"); 
-    //reset to blank by overwriting
-    resultsBox.innerHTML=s;
-}//end function
-function moreMsg(s){
-   var moreBox=document.getElementById("more"); 
-    //reset to blank by overwriting
-    moreBox.innerHTML=s;
-}//end function  
 </script>
 </head>
 
