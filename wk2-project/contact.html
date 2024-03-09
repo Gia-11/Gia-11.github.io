@@ -206,6 +206,31 @@ input[type="reset"] {
 
 }
 
+/* CSS for result and more divs */
+#results,
+#more {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* CSS for divs tablets */
+@media only screen and (max-width: 768px) {
+    #results,
+    #more {
+        font-size: 18px; /* Adjust font size as needed */
+    }
+}
+
+/* CSS for divs phones */
+@media only screen and (max-width: 480px) {
+    #results,
+    #more {
+        font-size: 16px; /* Adjust font size as needed */
+    }
+}
+
+
     </style>
 
 <script type="text/javascript">
@@ -228,10 +253,8 @@ input[type="reset"] {
                     moreMSG("Interesting " + name + ", you selected " + getSkill()); // used for skill selected and message
                 } // end else
             }
-            if(email==""||email==null){
-       resultsMsg("Email is required too");
-        }
     } // end function
+
     function getSkill() {
         var isChecked = false; // assume no button is checked
         var theSelection;
@@ -259,8 +282,9 @@ input[type="reset"] {
         // reponds to blank by overwriting
         resultsBox.innerHTML = s;
     } //end function
-
 }
+
+
 
 </script>
 </head>
