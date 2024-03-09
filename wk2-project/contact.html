@@ -223,9 +223,9 @@ input[type="reset"] {
             } else {
                 //alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
                 if (!getSkill()) {
-                    resultsMsg("Please select a skill");
+                    resultsMsg("Please select a skill level");
                 } else {
-                    moreMSG("Success " + name + ", you selected " + getSkill()); // used for skill selected and message
+                    moreMSG("Interesting " + name + ", you selected " + getSkill()); // used for skill selected and message
                 } // end else
             }
             if(email==""||email==null){
@@ -288,8 +288,8 @@ input[type="reset"] {
         </nav>
     </header>
 
-    <p>First Paragraph</p>
-    <p>Second Paragraph</p>
+    <p>How do you measure up?</p>
+    <p>Please selcet your skill level on a OneWheel</p>
 
     <form name="form1" id="form1" action="" method="post">
         <label>First Name:
@@ -305,10 +305,10 @@ input[type="reset"] {
         </label>
         <br>
 
-        <input type="radio" name="skillset" value="designer">Designer<br>
-        <input type="radio" name="skillset" value="developer">Developer<br>
-        <input type="radio" name="skillset" value="programmer">Programmer<br>
-        <input type="radio" name="skillset" value="artist">Artist<br>
+        <input type="radio" name="skillset" value="never">Never<br>
+        <input type="radio" name="skillset" value="beginner">Beginner<br>
+        <input type="radio" name="skillset" value="midlevel">Mid Level<br>
+        <input type="radio" name="skillset" value="pro">Pro<br>
 
         <input type="button" value="Submit" onclick="validateForm();"> &nbsp; &nbsp; <input type="reset"
             value="Clear Form"> <!-- results will submit when button clicked -->
