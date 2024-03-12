@@ -13,6 +13,10 @@
             $('html').dblclick(function() {
             alert('ouch');
         }); // end double click
+        $('a').mouseover(function() {
+            var message = "<p>You moused over a link</p>";
+            $('.main').append(message);
+        }); // end mouseover
         }); // end ready
         </script>
 
