@@ -249,18 +249,16 @@ input[type="reset"] {
         } else {
             //alert("Thank you " + name); // used for correct name message 
             if (age == "" || age == null || isNaN(age)) {
-                resultsMsg("Please enter a number for your age");} 
-                else {
-                //alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
-                if (!getSkill()) {
-                    resultsMsg("Please select a skill"); } 
-                    else {
-                    moreMSG("Sucess, you selected" + getSkill()); } // end else // used for skill selected and message
-                    {
-                        //end else
-                    }   
-            }
-    } // end function 
+            resultsMsg("Please enter a number for your age");
+        } else {
+            //alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
+            if (!getSkill()) {
+                resultsMsg("Please select a skill level");
+            } else {
+                moreMSG("Interesting " + name + ", you selected " + getSkill()); // used for skill selected and message
+            } // end else
+        }
+} // end function
 
     function getSkill() {
         var isChecked = false; // assume no button is checked
