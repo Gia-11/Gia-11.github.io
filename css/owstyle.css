@@ -33,6 +33,40 @@ body {
             display: inline;
             margin-right: 20px;
         }
+
+        /* CSS Main Content Section */
+        section {
+        font-family: 'sans-serif', semi-Bold;
+        padding: 20px;
+    }
+    /* CSS for 2 grid boards */
+    .board-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+    /* CSS media Queries for Tablet */
+    @media screen and (max-width: 768px) {
+    .board {
+        width: 45%;
+    }
+}
+
+    /* CSS media Queries for Smartphone */
+    @media screen and (max-width: 480px) {
+    .board {
+        width: 100%;
+    }
+}
+
+    .board {
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
         
         /* Footer css */
         footer {
