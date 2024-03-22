@@ -67,6 +67,28 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* CSS for 2 grid image containers */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(38ch, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
         
         /* Footer css */
         footer {
