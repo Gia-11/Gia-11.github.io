@@ -11,6 +11,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/owstyle.css">
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
+
+    <style> 
+        #myDIV {
+          width: 100%;
+          height: 100px;
+          background: orange;
+          position: relative;
+          font-size: 18px;
+          padding:16px;
+        }
+        @keyframes mymove {
+          from {top: 0px;}
+          to {top: 200px;}
+        }
+        </style>
+
     <script>
         
     </script>
@@ -35,13 +51,52 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <h1>SPate - Let's Ride!</h1>
-            <h2></h2>
+            <h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">SPate - Let's Ride!</h1>
+            <h2>The animationstart, animationiteration and animationend Events</h2>
+            <script>
+                const div1 = document.getElementById("myDIV");
+                
+                function myFunction() {
+                  div1.style.animation = "mymove 4s 2";
+                }
+                
+                div1.addEventListener("animationstart", myStartFunction);
+                div1.addEventListener("animationiteration", myRepeatFunction);
+                div1.addEventListener("animationend", myEndFunction);
+                
+                function myStartFunction() {
+                  this.innerHTML = "The animation has started";
+                  this.style.backgroundColor = "pink";
+                }
+                function myRepeatFunction() {
+                  this.innerHTML = "The animation was played again";
+                  this.style.backgroundColor = "lightblue";
+                }
+                function myEndFunction() {
+                  this.innerHTML = "The animation has completed";
+                  this.style.backgroundColor = "lightgray";
+                }
+                </script>
+            
         </header>
 
     <main>
 
+
     </main>
+
+    <script>
+        function mouseOver() {
+          document.getElementById("demo").style.color = "#39ff14";
+        }
+    
+        function mouseOut() {
+          document.getElementById("demo").style.color = "black";
+        }
+        </script>
+        
+        <div id="myDIV" onclick="myFunction()">Click me to start the animation.</div>
+
 
     <footer>
         <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
