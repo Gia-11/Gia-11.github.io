@@ -12,23 +12,6 @@
     <link rel="stylesheet" href="css/owstyle.css">
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
 
-    <style> 
-        #myDIV {
-        margin:auto;
-          width: 50%;
-          height: 50px;
-          background: #ffcc00;
-          position: relative;
-          font-size: 18px;
-          padding:16px;
-          text-align: center;
-        }
-        @keyframes mymove {
-          from {top: 0px;}
-          to {top: 200px;}
-        }
-        </style>
-
     <script>
         
     </script>
@@ -59,33 +42,6 @@
         </header>
 
         <main></main>
-
-    <!-- Script for Flaot Div -->
-    <script>
-        const div1 = document.getElementById("myDIV");
-        
-        function myFunction() {
-          div1.style.animation = "mymove 4s 2";
-        }
-        
-        div1.addEventListener("animationstart", myStartFunction);
-        div1.addEventListener("animationiteration", myRepeatFunction);
-        div1.addEventListener("animationend", myEndFunction);
-        
-        function myStartFunction() {
-          this.innerHTML = "321 FLOAT";
-          this.style.backgroundColor = "#39ff14";
-        }
-        function myRepeatFunction() {
-   this.innerHTML = "FLOATING";
-   this.style.backgroundColor = "#39ff14";
- }
-        function myEndFunction() {
-          this.innerHTML = "FLOAT Complete. Ahh!";
-          this.style.backgroundColor = "#ffcc00";
-        }
-        </script>
-        <br>
         
     <footer>
         <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
