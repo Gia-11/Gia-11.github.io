@@ -67,7 +67,7 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <h1>Gallery</h1>
+            <h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Gallery</h1>
             <h2></h2>
         </header>
 
@@ -106,6 +106,18 @@
 
     <script>
     </script>
+
+      <!-- Script for Let's Ride mouse over -->
+ <script>
+    function mouseOver() {
+      document.getElementById("demo").style.color = "#39ff14";
+    }
+
+    function mouseOut() {
+      document.getElementById("demo").style.color = "black";
+    }
+    </script>
+
         <script>
             function myFunction() {
       document.getElementById("demo").innerHTML += "Best for Beginners ";
