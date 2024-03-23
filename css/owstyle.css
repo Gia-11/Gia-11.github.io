@@ -62,6 +62,8 @@ body {
     .board {
     width: 30%;
     margin: 10px;
+    border: 15px #003366;
+    outline: #003366 solid 10px;
     padding: 15px;
     background-color: #ffcc00;
     border-radius: 8px;
