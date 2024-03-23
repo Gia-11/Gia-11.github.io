@@ -13,6 +13,7 @@
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
     
     <script>
+
     </script>
     
     </head>
@@ -43,7 +44,9 @@
         <section>
             <div class="board-container">
                 <div class="board">
-                    <h2>Stock Onewheel Pint X</h2>        
+                    <h2>Stock Onewheel Pint X</h2> 
+                    <p ondblclick="myFunction()">Double-click <span style="color:black;font-weight:bold;">HERE</span> for a tip</p>
+                    <p id="demo"></p>
                 </div>
     
                 <div class="board">
@@ -66,6 +69,11 @@
     </main>
 
     <script>
+    </script>
+        <script>
+            function myFunction() {
+      document.getElementById("demo").innerHTML += "Best for Beginners ";
+    }
     </script>
 
     <footer>
