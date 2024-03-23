@@ -10,9 +10,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/owstyle.css">
+    <style type="text/css">
+        #box{
+            background-color: #39ff14;
+            width: 200px;
+            height: 50px;
+            border: 15px #003366;
+            outline: #003366 solid 10px;
+            padding: 15px;
+            margin: 20px;
+            display: block;
+            display: none;
+        }
+
+        p {text-align: center;}
+    </style>
+    
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
     <script>
-        
+        $(function(){
+        $('a').click(function() {
+            //$('#box').hide('slow');
+            //$('#box').fadeOut();
+            //$('#box').slideUp(2000);
+            //$('#box').slideDown(2000);
+            //$('#box').fadeIn(2000);
+            $('#box').toggle('slow');
+            $('#box p').css('color', 'blue');
+        });
+
+    });
     </script>
     </head>
 
@@ -40,10 +67,14 @@
         </header>
 
     <main>
+        <p><a href="#">Click Me!</a></p>
+        <div id="box">
+        <p><a href="https://onewheel.com/" target="_blank">Onewheel home page</a></p>
+        </div>
+    </main> 
+    <br>
 
-    </main>
-
-    <footer>
+    <footer> 
         <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
     </footer>
 
