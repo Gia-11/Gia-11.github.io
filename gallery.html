@@ -121,13 +121,20 @@
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
-    <!-- Script for slie panel -->
+    <!-- Script for sldie panel -->
     <script>
       $(document).ready(function(){
-  $("#flip").click(function(){
-    $("#panel").slideToggle("slow");
-  });
-});
+        $("#flip").click(function(){
+          $("#panel").slideToggle("slow");
+        });
+      });
+
+    // script for p click me OneWheel link hide 
+    $(document).ready(function(){
+      $("p").click(function(){
+        $(this).hide();
+      });
+    });
     </script>
     
     </head>
@@ -186,7 +193,7 @@
             </div>
         </div>
     <main>
-        <p><a href="#">Click Me!</a></p>
+        <p><a href="#">Click Me!</a></p> <!-- Hides afet being clicked -->
         <div id="box">
         <p><a href="https://onewheel.com/" target="_blank">Onewheel home page</a></p>
         </div>
