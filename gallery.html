@@ -88,6 +88,19 @@
   font-size: 16px;
   padding: 16px 32px;
 }
+
+/* CSS for slide panel */
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
     </style>
         
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
@@ -105,9 +118,15 @@
     });
     </script>
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     
+    <!-- Script for slie panel -->
     <script>
-
+      $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
     </script>
     
     </head>
@@ -128,6 +147,9 @@
                 </ul>
             </nav>
             <h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Gallery</h1>
+
+            <div id="flip">What is is like to ride a OneWheel? <strong>Click to see</strong></div>
+            <div id="panel"><strong>Riding a OneWheel is the culmination of Surfing and Snowboarding</strong></div>
             <h2>Riding a OneWheel is the culmination of Surfing and Snowboarding</h2>
             <div id="myDIV" onclick="myFunction()">Click me to start the animation.</div>
         </header>
