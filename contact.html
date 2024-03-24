@@ -100,9 +100,16 @@ header {
     padding: 20px;
 }
 
-.logo {
-    width: 100px; /* Adjust as needed */
-}
+ /* CSS for LoGo control */
+ .logo {
+     display: block;
+     width: 100px; /* Adjust as needed */
+     max-width: 80px; /* Adjust the maximum width as needed */
+     margin: 20px auto; /* Adjust the margin for positioning */
+     border: 5px solid black;
+     padding: 2px;
+     border-radius: 90px 90px;
+ }
 
 .navbar {
     display: inline-block;
@@ -294,12 +301,7 @@ input[type="reset"] {
 <body>
     <header>
         <a href="index.html">
-            <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left width="100" height="100">
-            <style>
-            img {
-                border-radius: 90%;
-                }
-            </style>
+            <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
             <br>
         <nav class="navbar">
             <ul class="nav-links">

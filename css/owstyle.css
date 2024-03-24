@@ -16,8 +16,15 @@ body {
             padding: 20px;
         }
         
+        /* CSS for LoGo control */
         .logo {
+            display: block;
             width: 100px; /* Adjust as needed */
+            max-width: 80px; /* Adjust the maximum width as needed */
+            margin: 20px auto; /* Adjust the margin for positioning */
+            border: 5px solid black;
+            padding: 2px;
+            border-radius: 90px 90px;
         }
         
         .navbar {
