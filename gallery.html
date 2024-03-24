@@ -42,6 +42,47 @@
       from {top: 0px;}
       to {top: 200px;}
     }
+
+    /* CSS for opacity image div container */
+    .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #04AA6D;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
     </style>
         
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
@@ -108,7 +149,27 @@
                 <img src="img/mods.png" alt="Mods">
             </div>
         </div>
+    <!-- Opacity with box> -->
     </main>
+    <h3>Opacity with Box</h3>
+    <p>Hover over the image to see the effect.</p>
+
+    <div class="container">
+        <img src="img/stock.png" alt="Avatar" class="image" style="width:100%">
+            <div class="middle">
+                <div class="text">Pint X Stock</div>
+            </div>
+    </div>
+
+    <h3>Opacity with Box</h3>
+        <p>Hover over the image to see the effect.</p>
+
+        <div class="container">
+            <img src="img/mods.png" alt="Avatar" class="image" style="width:100%">
+                <div class="middle">
+            <div class="text">Modifications!</div>
+            </div>
+        </div>
     <main>
         <p><a href="#">Click Me!</a></p>
         <div id="box">
