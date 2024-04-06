@@ -10,10 +10,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/owstyle.css">
+    <link href="smartmenus/sm-core-css.css" rel="stylesheet" >
+    <link href="smartmenus/sm-blue.css" rel="stylesheet" >
 
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
+    <script src="_js/jquery.min.js"></script>
+    <script src="smartmenus/jquery.smartmenus.min.js"></script>
+    
     <script>
+                $(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+      $ul.slideUp(250, complete);
+    }
 
+  }); // end smartmenus
+}); // end ready  
     </script>
     </head>
 
@@ -23,18 +38,44 @@
                 <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
                 </style>
                 </a>
+                <header>
                 <br>
-            <nav class="navbar">
+                <div class="content">
+                    <div class="main">
+                      <h1>About Us</h1>
+                      <ul class="sm sm-blue">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="product.html">Product</a>
+                          <ul>
+                            <li><a href="#">Pint X</a></li>
+                            <li><a href="#">GT</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Service </a>
+                          <ul>
+                                <li><a href="#">Service name 1</a></li>
+                                <li><a href="#">Service name 2</a></li>
+                                <li><a href="#">Service name 3</a></li>
+                              </ul>
+                            </li>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+            <!-- <nav class="navbar">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About OneWheel</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
-            <h1>About OneWheel</h1>
+            </nav> -->
+            <h1>About Us Riders</h1>
             <h2></h2>
-        </header>
 
     <footer> 
         <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
