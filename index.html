@@ -10,10 +10,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/owstyle.css">
+    <link href="smartmenus/sm-core-css.css" rel="stylesheet" >
+<link href="smartmenus/sm-blue.css" rel="stylesheet" >
+
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
+    <script src="_js/jquery.min.js"></script>
+<script src="smartmenus/jquery.smartmenus.min.js"></script>
 
     <script>
-        
+        $(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+      $ul.slideUp(250, complete);
+    }
+
+  }); // end smartmenus
+}); // end ready  
     </script>
     </head>
 
