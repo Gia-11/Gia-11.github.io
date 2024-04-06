@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/owstyle.css">
+    <link href="smartmenus/sm-core-css.css" rel="stylesheet" >
+    <link href="smartmenus/sm-blue.css" rel="stylesheet" >    
     <style type="text/css">
         body {
             font-family: Verdana, Geneva, sans-serif;
@@ -245,7 +248,24 @@ input[type="reset"] {
 
     </style>
 
-<script type="text/javascript">
+    <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
+    <script src="_js/jquery.min.js"></script>
+    <script src="smartmenus/jquery.smartmenus.min.js"></script>
+    <script>
+        $(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+      $ul.slideUp(250, complete);
+    }
+
+    }); // end smartmenus
+    }); // end ready  
+    </script>
+
+    <script type="text/javascript"> 
     function validateForm() {
         // alert("Success"); // used to test validation
         var name = document.getElementById("name").value;
@@ -265,7 +285,7 @@ input[type="reset"] {
                 moreMSG("Interesting " + name + ", you selected " + getSkill()); // used for skill selected and message
             } // end else
         }
-} // end function
+        } // end function
 
     function getSkill() {
         var isChecked = false; // assume no button is checked
@@ -303,15 +323,42 @@ input[type="reset"] {
         <a href="index.html">
             <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
             <br>
-        <nav class="navbar">
+        </header>
+        <br>
+
+        <div class="content">
+            <div class="main">
+              <h1>Contact</h1>
+              <ul class="sm sm-blue">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="product.html">Product</a>
+                  <ul>
+                    <li><a href="#">Pint X</a></li>
+                    <li><a href="#">GT</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Service </a>
+                  <ul>
+                        <li><a href="#">Service name 1</a></li>
+                        <li><a href="#">Service name 2</a></li>
+                        <li><a href="#">Service name 3</a></li>
+                      </ul>
+                    </li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        <!--c<nav class="navbar">
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About OneWheel</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </nav>
-    </header>
+        </nav> -->
 
     <p>How do you measure up?</p>
     <p>Please selcet your skill level on a OneWheel</p>
