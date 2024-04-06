@@ -10,6 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/owstyle.css">
+    <style>
+        #gallery {
+            float: left;
+            width: 90px;
+            margin-right: 30px;
+            margin-left: 10px;
+            border-right: white 1px dotted;
+        }
+        #gallery img {
+            display: inline-block;
+            margin: 0 0 10px 0;
+            border: 1px solid rgb(0,0,0);
+        }
+        #photo {
+            margin-left: 150px;
+            position: relative;
+        }
+        #photo img {
+            position: absolute;
+        }
+        </style>
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
     <script src="_js/jquery.min.js"></script>
 <script>
@@ -75,18 +96,19 @@ $('#gallery a:first').click();
                 <div class="content">
                     <div class="main">
                         <h1>Slideshow</h1>
-                        <div id="gallery"> <a href="img/img1.jpg"><img src="img/img1_thumb.jpg" width="70" height="70" alt="golf balls"></a> 
-                            <a href="img/img2.jpg"><img src="img/img2_thumb.jpg" width="70" height="70" alt="rock wall"></a> 
-                            <a href="img/img3.jpg"><img src="img/img3_thumb.jpg" width="70" height="70" alt="old course"></a> 
-                            <a href="img/img4.jpg"><img src="img/img4_thumb.jpg" width="70" height="70" alt="tees"></a> 
-                            <a href="img/img5.jpg"><img src="img/img5_thumb.jpg" width="70" height="70" alt="tree"></a> 
-                            <a href="img/img6.jpg"><img src="img/img6_thumb.jpg" width="70" height="70" alt="ocean course"></a></div>
+                        <div id="gallery"> <a href="img/img1.jpg"><img src="img/img1_thumb.jpg" width="70" height="70" alt="2x2 Ride"></a> 
+                            <a href="img/img2.jpg"><img src="img/img2_thumb.jpg" width="70" height="70" alt="Attention"></a> 
+                            <a href="img/img3.jpg"><img src="img/img3_thumb.jpg" width="70" height="70" alt="Pint & Pint X"></a> 
+                            <a href="img/img4.jpg"><img src="img/img4_thumb.jpg" width="70" height="70" alt="Women with helment on Onwheel"></a> 
+                            <a href="img/img5.jpg"><img src="img/img5_thumb.jpg" width="70" height="70" alt="Foot on back pad of OneWheel"></a> 
+                            <a href="img/img6.jpg"><img src="img/img6_thumb.jpg" width="70" height="70" alt="man getting support from a friend on OneWheel"></a></div>
                         <div id="photo"></div>
                     </div>
                 </div>
+                </div>
+                <br>
+            </body>
 
-        <main></main>
-        
     <footer>
         <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
     </footer>
