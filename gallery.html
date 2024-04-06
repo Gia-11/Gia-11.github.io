@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Gallery</title>
+    <title>OneWheel</title>
     <meta charset="UTF-8">
     <meta name="description" content="WGD310-Project">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
@@ -10,140 +10,70 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/owstyle.css">
-
-    <style type="text/css">
-
-      h3 {
-        text-align: center;
-      }
-        #box{
-            background-color: #39ff14;
-            width: 200px;
-            height: 50px;
-            border: 15px #003366;
-            outline: #003366 solid 10px;
-            padding: 15px;
-            margin: 20px;
-            display: block;
-            display: none;
+    <style>
+        #gallery {
+            float: left;
+            width: 90px;
+            margin-right: 30px;
+            margin-left: 10px;
+            border-right: white 1px dotted;
         }
-        p {text-align: center;}
-
-        /* Float Amination */
-        #myDIV {
-        margin:auto;
-        width: 50%;
-        height: 50px;
-        border: 15px #003366;
-        border-radius: 8px;
-        outline: #003366 solid 10px;
-        background: #ffcc00;
-        position: relative;
-        font-size: 18px;
-        padding:16px;
-        text-align: center;
+        #gallery img {
+            display: inline-block;
+            margin: 0 0 10px 0;
+            border: 1px solid rgb(0,0,0);
         }
-        @keyframes mymove {
-        from {top: 0px;}
-        to {top: 200px;}
+        #photo {
+            margin-left: 150px;
+            position: relative;
         }
-
-    /* CSS for opacity image div container */
-    .container {
-  position: relative;
-  width: 50%;
-}
-
-.image {
-  opacity: 1;
-  display: block;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.container:hover .image {
-  opacity: 0.3;
-}
-
-.container:hover .middle {
-  opacity: 1;
-}
-
-.text {
-  background-color: #ffcc00;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
-}
-
-/* CSS for slide panel */
-#panel, #flip {
-  padding: 5px;
-  text-align: center;
-  background-color: #ffcc00;
-  border-radius: 8px;
-  outline: #003366 solid 10px;
-}
-
-#panel {
-  padding: 50px;
-  display: none;
-}
-    </style>
-        
+        #photo img {
+            position: absolute;
+        }
+        </style>
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
-    <script>
-        $(function(){
-        $('a').click(function() {
-            //$('#box').hide('slow');
-            //$('#box').fadeOut();
-            //$('#box').slideUp(2000);
-            //$('#box').slideDown(2000);
-            //$('#box').fadeIn(2000);
-            $('#box').toggle('slow');
-            $('#box p').css('color', 'blue');
-        });
-    });
-    </script>
-    <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
-    <!-- Script for sldie panel -->
-    <script>
-      $(document).ready(function(){
-        $("#flip").click(function(){
-          $("#panel").slideToggle("slow");
-        });
-      });
-
-    // script for p click me OneWheel link hide 
-    $(document).ready(function(){
-      $("p").click(function(){
-        $(this).hide();
-      });
-    });
-    </script>
-    
+    <script src="_js/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+		
+$('#gallery img').each(function(i) {
+	var imgFile = $(this).attr('src');
+	var preloadImage = new Image();
+	var imgExt = /(\.\w{3,4}$)/;
+	preloadImage.src = imgFile.replace(imgExt,'_h$1');
+		
+	$(this).hover(
+		function() {
+			$(this).attr('src', preloadImage.src);
+		},
+		function () {
+		var currentSource=$(this).attr('src');
+			$(this).attr('src', imgFile);
+	}); // end hover
+}); // end each
+	
+//insert new programming below this line
+$('#gallery a').click(function(evt) {
+	evt.preventDefault();
+	var imgPath = $(this).attr('href');
+	var oldImage = $('#photo img');
+	var newImage = $('<img src="' + imgPath +'">');
+	newImage.hide();
+	$('#photo').prepend(newImage);
+	newImage.fadeIn(1000);
+	oldImage.fadeOut(1000,function(){
+		$(this).remove();
+	}); // end fadeout
+}); // end click
+$('#gallery a:first').click();
+}); // end ready
+</script>
     </head>
 
-    <body>
+   
         <header>
             <a href="index.html">
-                <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
-                </style>
+                <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left> 
                 </a>
                 <br>
             <nav class="navbar">
@@ -154,93 +84,34 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">Gallery</h1>
-
-            <div id="flip">What is is like to ride a OneWheel? <strong>Click to see</strong></div>
-            <div id="panel"><strong>Riding a OneWheel is the culmination of Surfing and Snowboarding</strong></div>
-            <br>
-            <br>
-            <div id="myDIV" onclick="myFunction()"><strong>Experience Float state HERE</strong></div>
+            <h1>Photo Gallery</h1>
+            <h2></h2>
+            
         </header>
-
-        <section>
-            <div class="board-container">
-                <div class="board">
-                    <h2>Stock Onewheel Pint X</h2> 
+        <body>
+            <div class="wrapper">
+                <header>
+                <!-- -->
+                </header>
+                <div class="content">
+                    <div class="main">
+                        <h1>Slideshow</h1>
+                        <div id="gallery"> <a href="img/img1.jpg"><img src="img/img1_thumb.jpg" width="70" height="70" alt="2x2 Ride"></a> 
+                            <a href="img/img2.jpg"><img src="img/img2_thumb.jpg" width="70" height="70" alt="Attention"></a> 
+                            <a href="img/img3.jpg"><img src="img/img3_thumb.jpg" width="70" height="70" alt="Pint & Pint X"></a> 
+                            <a href="img/img4.jpg"><img src="img/img4_thumb.jpg" width="70" height="70" alt="Women with helment on Onwheel"></a> 
+                            <a href="img/img5.jpg"><img src="img/img5_thumb.jpg" width="70" height="70" alt="Foot on back pad of OneWheel"></a> 
+                            <a href="img/img6.jpg"><img src="img/img6_thumb.jpg" width="70" height="70" alt="man getting support from a friend on OneWheel"></a></div>
+                        <div id="photo"></div>
+                    </div>
                 </div>
-    
-                <div class="board">
-                    <h2>Onewheel Pint X with Mods</h2>
                 </div>
-            </div>
-        </section>
-
-    <!-- Opacity with box> -->
-    </main>
-    <h3>Hover over the image to see the effect</h3>
-    <div class="container">
-        <img src="img/stock.png" alt="Stock Pint X" class="image" style="width: 100%">
-            <div class="middle">
-                <div class="text">Pint X Stock</div>
-            </div>
-    </div>
-
-    <h3>Hover over the image to see the effect</h3>
-        <div class="container">
-            <img src="img/mods.png" alt="Pint X with Mods" class="image" style="width: 100%">
-                <div class="middle">
-            <div class="text">Modifications!</div>
-            </div>
-        </div>
-    <main>
-        <p><a href="#">Click Me!</a></p> <!-- Hides afet being clicked -->
-        <div id="box">
-        <p><a href="https://onewheel.com/" target="_blank">Onewheel home page</a></p>
-        </div>
-    </main> 
-    <br>
-
-      <!-- Script for Gallery mouse over -->
-    <script>
-    function mouseOver() {
-      document.getElementById("demo").style.color = "#39ff14";
-    }
-
-    function mouseOut() {
-      document.getElementById("demo").style.color = "black";
-    }
-    </script>
-
-      <!-- Script for Float Div -->
-  <script>
-    const div1 = document.getElementById("myDIV");
-
-function myFunction() {
-  div1.style.animation = "mymove 4s 2";
-}
-
-div1.addEventListener("animationstart", myStartFunction);
-div1.addEventListener("animationiteration", myRepeatFunction);
-div1.addEventListener("animationend", myEndFunction);
-
-function myStartFunction() {
-  this.innerHTML = "321..";
-  this.style.backgroundColor = "#39ff14";
-}
-function myRepeatFunction() {
-  this.innerHTML = "FLOATING";
-  this.style.backgroundColor = "#39ff14";
-}
-function myEndFunction() {
-  this.innerHTML = "FLOAT Complete. Ahh!";
-  this.style.backgroundColor = "#ffcc00";
-}
-  </script>
-    <br>
+                <br>
+            </body>
 
     <footer>
         <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
     </footer>
+
     </html>
 </body>
-    
