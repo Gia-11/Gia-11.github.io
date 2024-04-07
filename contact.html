@@ -60,11 +60,22 @@
     } else if (!isValidEmail(email)) {
         resultsMsg("Please enter a valid email address");
     } else if (!isValidPhoneNumber(phone)) {
-        resultsMsg("Please enter a valid phone number");
+        resultsMsg("Please enter a valid phone number, ex:5555555555");
     } else {
         moreMSG("Thank you, " + name + "! Your details have been submitted successfully.");
     }
 }
+
+function isValidEmail(email) {
+    var emailRegex = /\S+@\S+\.\S+/;
+    return emailRegex.test(email);
+}
+
+function isValidPhoneNumber(phone) {
+    var phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
+}
+
 
 function getSkill() {
     var isChecked = false;
@@ -79,19 +90,6 @@ function getSkill() {
     }
     return isChecked ? theSelection : false;
 }
-
-function isValidEmail(email) {
-    // Basic email validation regex
-    var emailRegex = /\S+@\S+\.\S+/;
-    return emailRegex.test(email);
-}
-
-function isValidPhoneNumber(phone) {
-    // Basic phone number validation regex
-    var phoneRegex = /^\d{10}$/;
-    return phoneRegex.test(phone);
-}
-
 function resultsMsg(s) {
     var resultsBox = document.getElementById("results");
     resultsBox.innerHTML = s;
@@ -170,7 +168,6 @@ function moreMSG(s) {
             <input type="email" id="email" name="email"> 
         </label> -->
         <br>
-        
 
         <input type="radio" name="skillset" value="never">Never<br>
         <input type="radio" name="skillset" value="beginner">Beginner<br>
