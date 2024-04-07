@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>OneWheel</title>
+    <title>About</title>
     <meta charset="UTF-8">
     <meta name="description" content="WGD310-Project">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
@@ -13,73 +13,272 @@
     <link href="smartmenus/sm-core-css.css" rel="stylesheet" >
     <link href="smartmenus/sm-blue.css" rel="stylesheet" >
 
-    <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
-    <script src="_js/jquery.min.js"></script>
-    <script src="smartmenus/jquery.smartmenus.min.js"></script>
-    
-    <script>
-                $(document).ready(function() {
-  $('.sm').smartmenus({
-    showFunction: function($ul, complete) {
-      $ul.slideDown(250, complete);
-    },
-    hideFunction: function($ul, complete) {
-      $ul.slideUp(250, complete);
-    }
+    <style type="text/css">
+      h1 {text-align: center;}
+      h3 {
+        text-align: center;
+      }
+        #box{
+            background-color: #39ff14;
+            width: 200px;
+            height: 50px;
+            border: 15px #003366;
+            outline: #003366 solid 10px;
+            padding: 15px;
+            margin: 20px;
+            display: block;
+            display: none;
+        }
+        p {text-align: center;}
 
-  }); // end smartmenus
-}); // end ready  
+        /* Float Amination */
+        #myDIV {
+        margin:auto;
+        width: 50%;
+        height: 50px;
+        border: 15px #003366;
+        border-radius: 8px;
+        outline: #003366 solid 10px;
+        background: #ffcc00;
+        position: relative;
+        font-size: 18px;
+        padding:16px;
+        text-align: center;
+        }
+        @keyframes mymove {
+        from {top: 0px;}
+        to {top: 200px;}
+        }
+
+    /* CSS for opacity image div container */
+    .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #ffcc00;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+/* CSS for slide panel */
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #ffcc00;
+  border-radius: 8px;
+  outline: #003366 solid 10px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
+    </style>
+        <script src="_js/jquery.min.js"></script>
+        <script src="smartmenus/jquery.smartmenus.min.js"></script>
+        
+            <script>
+                $(document).ready(function() {
+          $('.sm').smartmenus({
+            showFunction: function($ul, complete) {
+              $ul.slideDown(250, complete);
+            },
+            hideFunction: function($ul, complete) {
+              $ul.slideUp(250, complete);
+            }
+        
+          }); // end smartmenus
+        }); // end ready  
+            </script>
+        
+    <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+        $('a').click(function() {
+            //$('#box').hide('slow');
+            //$('#box').fadeOut();
+            //$('#box').slideUp(2000);
+            //$('#box').slideDown(2000);
+            //$('#box').fadeIn(2000);
+            $('#box').toggle('slow');
+            $('#box p').css('color', 'blue');
+        });
+    });
     </script>
+    <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Script for sldie panel -->
+    <script>
+      $(document).ready(function(){
+        $("#flip").click(function(){
+          $("#panel").slideToggle("slow");
+        });
+      });
+
+    // script for p click me OneWheel link hide 
+    $(document).ready(function(){
+      $("p").click(function(){
+        $(this).hide();
+      });
+    });
+    </script>
+    
     </head>
 
     <body>
         <header>
             <a href="index.html">
                 <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
-                </style>
                 </a>
-                <header>
+              </header>
                 <br>
+
                 <div class="content">
-                    <div class="main">
-                      <h1>About Us</h1>
-                      <ul class="sm sm-blue">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="product.html">Product</a>
-                          <ul>
-                            <li><a href="#">Pint X</a></li>
-                            <li><a href="#">GT</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Service </a>
-                          <ul>
-                                <li><a href="#">Service name 1</a></li>
-                                <li><a href="#">Service name 2</a></li>
-                                <li><a href="#">Service name 3</a></li>
-                              </ul>
-                            </li>
-                        </li>
-                      </ul>
-                    </div>
+                  <div class="main">
+                    <h1>About Us</h1>
+                    <ul class="sm sm-blue">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="contact.html">Contact</a></li>
+                      <li><a href="faq.html">FAQ</a></li>
+                      <li><a href="product.html">Product</a>
+                        <ul>
+                          <li><a href="#">Pint X</a></li>
+                          <li><a href="#">GT</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Service </a>
+                        <ul>
+                              <li><a href="#">Service name 1</a></li>
+                              <li><a href="#">Service name 2</a></li>
+                              <li><a href="#">Service name 3</a></li>
+                            </ul>
+                          </li>
+                      </li>
+                    </ul>
                   </div>
+                </div>
 
-            <!-- <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About OneWheel</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav> -->
-            <h1>About Us Riders</h1>
-            <h2></h2>
+            <h1 id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()">About Us Riders</h1>
 
-    <footer> 
+            <div id="flip">What is is like to ride a OneWheel? <strong>Click to see</strong></div>
+            <div id="panel"><strong>Riding a OneWheel is the culmination of Surfing and Snowboarding</strong></div>
+            <br>
+            <br>
+            <div id="myDIV" onclick="myFunction()"><strong>Experience Float state HERE</strong></div>
+        
+
+        <section>
+            <div class="board-container">
+                <div class="board">
+                    <h2>Stock Onewheel Pint X</h2> 
+                </div>
+    
+                <div class="board">
+                    <h2>Onewheel Pint X with Mods</h2>
+                </div>
+            </div>
+        </section>
+
+    <!-- Opacity with box> -->
+    </main>
+    <h3>Hover over the image to see the effect</h3>
+    <div class="container">
+        <img src="img/stock.png" alt="Stock Pint X" class="image" style="width: 100%">
+            <div class="middle">
+                <div class="text">Pint X Stock</div>
+            </div>
+    </div>
+
+    <h3>Hover over the image to see the effect</h3>
+        <div class="container">
+            <img src="img/mods.png" alt="Pint X with Mods" class="image" style="width: 100%">
+                <div class="middle">
+            <div class="text">Modifications!</div>
+            </div>
+        </div>
+    <main>
+        <p><a href="#">Click Me!</a></p> <!-- Hides afet being clicked -->
+        <div id="box">
+        <p><a href="https://onewheel.com/" target="_blank">Onewheel home page</a></p>
+        </div>
+    </main> 
+    <br>
+
+      <!-- Script for Gallery mouse over -->
+    <script>
+    function mouseOver() {
+      document.getElementById("demo").style.color = "#39ff14";
+    }
+
+    function mouseOut() {
+      document.getElementById("demo").style.color = "black";
+    }
+    </script>
+
+      <!-- Script for Float Div -->
+  <script>
+    const div1 = document.getElementById("myDIV");
+
+function myFunction() {
+  div1.style.animation = "mymove 4s 2";
+}
+
+div1.addEventListener("animationstart", myStartFunction);
+div1.addEventListener("animationiteration", myRepeatFunction);
+div1.addEventListener("animationend", myEndFunction);
+
+function myStartFunction() {
+  this.innerHTML = "321..";
+  this.style.backgroundColor = "#39ff14";
+}
+function myRepeatFunction() {
+  this.innerHTML = "FLOATING";
+  this.style.backgroundColor = "#39ff14";
+}
+function myEndFunction() {
+  this.innerHTML = "FLOAT Complete. Ahh!";
+  this.style.backgroundColor = "#ffcc00";
+}
+  </script>
+    <br>
+
+    <footer>
         <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
     </footer>
-
     </html>
 </body>
+    
