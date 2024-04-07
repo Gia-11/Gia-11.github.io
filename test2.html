@@ -19,70 +19,63 @@
     <script src="_js/jquery.min.js"></script>
     <script src="smartmenus/jquery.smartmenus.min.js"></script>
     <script>
-        $(document).ready(function() {
-  $('.sm').smartmenus({
-    showFunction: function($ul, complete) {
-      $ul.slideDown(250, complete);
-    },
-    hideFunction: function($ul, complete) {
-      $ul.slideUp(250, complete);
+        function validateForm() {
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+
+    if (name == "" || name == null) {
+        resultsMsg("We need your name please");
+    } else if (age == "" || age == null || isNaN(age)) {
+        resultsMsg("Please enter a valid age");
+    } else if (!getSkill()) {
+        resultsMsg("Please select a skill level");
+    } else if (!isValidEmail(email)) {
+        resultsMsg("Please enter a valid email address");
+    } else if (!isValidPhoneNumber(phone)) {
+        resultsMsg("Please enter a valid phone number");
+    } else {
+        moreMSG("Thank you, " + name + "! Your details have been submitted successfully.");
     }
-
-    }); // end smartmenus
-    }); // end ready  
-    </script>
-
-    <script type="text/javascript"> 
-    function validateForm() {
-        // alert("Success"); // used to test validation
-        var name = document.getElementById("name").value;
-        var age = document.getElementById("age").value;
-        //alert("Name= " + name + " Age= " + age); // used to test validation of name and age
-        if (name == "" || name == null) { //checking for null or empty
-            resultsMsg("We need your name please");
-        } else {
-            //alert("Thank you " + name); // used for correct name message 
-            if (age == "" || age == null || isNaN(age)) {
-            resultsMsg("Please enter a number for your age");
-        } else {
-            //alert("thanks " + name + "You are" + age + "--yeah, right!"); // used for correct age needs to be a number and a message
-            if (!getSkill()) {
-                resultsMsg("Please select a skill level");
-            } else {
-                moreMSG("Interesting " + name + ", you selected " + getSkill()); // used for skill selected and message
-            } // end else
-        }
-        } // end function
-
-    function getSkill() {
-        var isChecked = false; // assume no button is checked
-        var theSelection;
-        var skills = document.getElementsByName('skillset'); // returns an array-- look it up :-)
-        for (var i = 0; i < skills.length; i++) {
-            if (skills[i].checked) { // checks for attribute being true
-                isChecked = true;
-                theSelection = skills[i].value;
-                break; // leave the loop since only one item can be checked
-            } // end if
-        } // end for
-        if (isChecked) {
-            return theSelection;
-        } else {
-            return false;
-        } // end else
-    } //end function
-    function resultsMsg(s) { // 1st set of messages
-        var resultsBox = document.getElementById("results");
-        // reponds to blank by overwriting
-        resultsBox.innerHTML = s;
-    } //end function
-    function moreMSG(s) { // for last more messages
-        var resultsBox = document.getElementById("more");
-        // reponds to blank by overwriting
-        resultsBox.innerHTML = s;
-    } //end function
 }
-</script>
+
+function getSkill() {
+    var isChecked = false;
+    var theSelection;
+    var skills = document.getElementsByName('skillset');
+    for (var i = 0; i < skills.length; i++) {
+        if (skills[i].checked) {
+            isChecked = true;
+            theSelection = skills[i].value;
+            break;
+        }
+    }
+    return isChecked ? theSelection : false;
+}
+
+function isValidEmail(email) {
+    // Basic email validation regex
+    var emailRegex = /\S+@\S+\.\S+/;
+    return emailRegex.test(email);
+}
+
+function isValidPhoneNumber(phone) {
+    // Basic phone number validation regex
+    var phoneRegex = /^\d{10}$/;
+    return phoneRegex.test(phone);
+}
+
+function resultsMsg(s) {
+    var resultsBox = document.getElementById("results");
+    resultsBox.innerHTML = s;
+}
+
+function moreMSG(s) {
+    var resultsBox = document.getElementById("more");
+    resultsBox.innerHTML = s;
+}
+    </script>
 </head>
 
 <body>
@@ -138,11 +131,20 @@
         <label>Your Age: &nbsp; <!-- non breaking speace / better to do in CSS -->
             <input type="text" id="age" name="age">
         </label>
-        <br> <!-- new line here -->
+        <br> 
+        <label>Email:
+            <input type="text" id="email" name="email" placeholder="Enter your email">
+        </label>
+        <br>
+        <label>Phone:
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+        </label>
+        <!-- new line here -->
         <!-- <label>Email Address:
             <input type="email" id="email" name="email"> 
         </label> -->
         <br>
+        
 
         <input type="radio" name="skillset" value="never">Never<br>
         <input type="radio" name="skillset" value="beginner">Beginner<br>
