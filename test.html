@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>OneWheel</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="WGD310-Project">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="SPate"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/owstyle.css">
+
+<style>
+  h1 {text-align: center;}
+  h2 {text-align: center;}
+  p {text-align: center;}
+  div {text-align: center;}
+  </style>
+
+    <script src="_js/dropdown-menu.js"></script>
+    <script src="_js/jquery-1.11.3.js"></script>
+    <script src="_js/jquery.min.js"></script>
+    <script src="_js/jquery-ui.min.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('#accordion').accordion({
+                active: false,
+                collapsible: true,
+                icons: {
+                    header: 'ui-icon-circle-plus',
+                    activeHeader: 'ui-icon-circle-minus'
+                }
+            });
+        }); // end ready
+
+    </script>
+
+    body>
+   <header>
+       <a href="index.html">
+           <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
+           </a>
+       </header>
+           <br>
+               <div class="wrapper">
+        <header>
+            <div class="content">
+                <div class="nav">
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a>
+                            <ul>
+                                <li><a href="gallery.html">Image Gallery</a></li>
+                                <li><a href="information.html">More Information</a>
+                                    <ul>
+                                        <li><a href="links.html">Information Links</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <footer>
+            <small>Copyright @ WéB1 2024 _ OneWheel Themed Project _ All rights reserved.</small>
+        </footer>
+    
+        </html>
+    </body>
+
