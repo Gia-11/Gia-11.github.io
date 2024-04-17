@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="css/owstyle.css">
-
+    <link href="smartmenus/sm-core-css.css" rel="stylesheet" >
+<link href="smartmenus/sm-blue.css" rel="stylesheet" >
 <style>
   h1 {text-align: center;}
   h2 {text-align: center;}
@@ -18,60 +19,81 @@
   div {text-align: center;}
   </style>
 
-    <script src="_js/dropdown-menu.js"></script>
-    <script src="_js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
     <script src="_js/jquery.min.js"></script>
-    <script src="_js/jquery-ui.min.js"></script>
+<script src="smartmenus/jquery.smartmenus.min.js"></script>
 
     <script>
+        $(document).ready(function() {
+  $('.sm').smartmenus({
+    showFunction: function($ul, complete) {
+      $ul.slideDown(250, complete);
+    },
+    hideFunction: function($ul, complete) {
+      $ul.slideUp(250, complete);
+    }
 
-        $(document).ready(function () {
-            $('#accordion').accordion({
-                active: false,
-                collapsible: true,
-                icons: {
-                    header: 'ui-icon-circle-plus',
-                    activeHeader: 'ui-icon-circle-minus'
-                }
-            });
-        }); // end ready
-
+  }); // end smartmenus
+}); // end ready  
     </script>
+    </head>
 
-    body>
-   <header>
-       <a href="index.html">
-           <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left>
-           </a>
-       </header>
-           <br>
-               <div class="wrapper">
+    <body>
         <header>
-            <div class="content">
-                <div class="nav">
-                    <ul class="menu">
+            <a href="index.html">
+                <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left> 
+                </a>
+            </header>
+                <br>
+                <div class="content">
+                    <div class="main">
+                      <h1>SPate - Let's Ride!</h1>
+                      <ul class="sm sm-blue">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a>
-                            <ul>
-                                <li><a href="gallery.html">Image Gallery</a></li>
-                                <li><a href="information.html">More Information</a>
-                                    <ul>
-                                        <li><a href="links.html">Information Links</a>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="product.html">Product</a>
+                          <ul>
+                            <li><a href="#">Pint X</a></li>
+                            <li><a href="#">GT</a></li>
+                          </ul>
                         </li>
-                        <li><a href="facts.html">Facts</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
-        </header>
+                        <li><a href="service.html">Service </a>
+                          <ul>
+                                <li><a href="#">Service name 1</a></li>
+                                <li><a href="#">Service name 2</a></li>
+                                <li><a href="#">Service name 3</a></li>
+                              </ul>
+                            </li>
+                        </li>
+                      </ul>
+                
+                
+                      <p style="clear:both;padding-top: 20px;" >OneWheel for more details see  <a href="https://onewheel.com/">ONEWHEEL</a>.</p>
+                    </div>
+                  </div>
 
-        <footer>
-            <small>Copyright @ WéB1 2024 _ OneWheel Themed Project _ All rights reserved.</small>
-        </footer>
+                  <!-- original Nav -->
+            <!-- <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About OneWheel</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav> -->
+            <h2>Don't Stop Now</h2>
+
+        <main></main>
+        
+    <footer>
+        <small>Copyright @ WéB1 2024 _ OneWheel _ All rights reserved.</small>
+    </footer>
+
+    </html>
+</body>
     
-        </html>
-    </body>
+
+
 
