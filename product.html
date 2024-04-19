@@ -17,6 +17,94 @@
   h2 {text-align: center;}
   p {text-align: center;}
   div {text-align: center;}
+  /* div box */
+  #box{
+            background-color: #39ff14;
+            width: 200px;
+            height: 50px;
+            border: 15px #003366;
+            outline: #003366 solid 10px;
+            padding: 15px;
+            margin: 20px;
+            display: block;
+            display: none;
+        }
+        p {text-align: center;}
+
+        /* Float Amination */
+        #myDIV {
+        margin:auto;
+        width: 50%;
+        height: 50px;
+        border: 15px #003366;
+        border-radius: 8px;
+        outline: #003366 solid 10px;
+        background: #ffcc00;
+        position: relative;
+        font-size: 18px;
+        padding:16px;
+        text-align: center;
+        }
+        @keyframes mymove {
+        from {top: 0px;}
+        to {top: 200px;}
+        }
+
+    /* CSS for opacity image div container */
+    .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #ffcc00;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+/* CSS for slide panel */
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #ffcc00;
+  border-radius: 8px;
+  outline: #003366 solid 10px;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+
   </style>
 
     <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
@@ -66,6 +154,48 @@
                   </div>
 
             <h2>Check out OneWheel products</h2>
+
+            <section>
+              <div class="board-container">
+                  <div class="board">
+                      <h2>Stock Onewheel Pint X</h2> 
+                  </div>
+      
+                  <div class="board">
+                      <h2>Onewheel Pint X with Mods</h2>
+                  </div>
+              </div>
+          </section>
+  
+      <!-- Opacity with box> -->
+      </main>
+      <h3>Hover over the image to see the effect</h3>
+      <div class="container">
+          <img src="img/stock.png" alt="Stock Pint X" class="image" style="width: 100%">
+              <div class="middle">
+                  <div class="text">Pint X Stock</div>
+              </div>
+      </div>
+  
+      <h3>Hover over the image to see the effect</h3>
+          <div class="container">
+              <img src="img/mods.png" alt="Pint X with Mods" class="image" style="width: 100%">
+                  <div class="middle">
+              <div class="text">Modifications!</div>
+              </div>
+          </div>
+      <br>
+  
+        <!-- Script for Gallery mouse over -->
+      <script>
+      function mouseOver() {
+        document.getElementById("demo").style.color = "#39ff14";
+      }
+  
+      function mouseOut() {
+        document.getElementById("demo").style.color = "black";
+      }
+      </script>
 
         <main></main>
         
