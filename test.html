@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TEST TEST TEST</title>
+    <script src="_js/jquery.min.js"></script>
+    <script src="_js/jquery-ui.min.js"></script>
+    <script src="_js/dropdown-menu.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script>
+
+        $(document).ready(function () {
+            $('.fact').hide();
+            $('.sport h2').click(function () {
+                var $fact = $(this).next('.fact');
+                if ($fact.is(':hidden')) {
+                    $fact.slideToggle(1500);
+                    $(this).addClass('close');
+                } else {
+                    $fact.fadeOut(1500);
+                    $(this).removeClass('close');
+                }
+            });
+
+            $(".sport").mouseover(function () {
+                $(this).fadeIn(1500).css("background-color", "yellow");
+            });
+
+            $(".sport").mouseout(function () {
+                $(this).css("background-color", "white");
+            });
+
+            $('#sports').hover(
+                function () {
+                    $(this).stop().animate(
+                        {
+                            backgroundColor: 'gray',
+                            opacity: 1.0
+                        },
+                        1750,
+                        'easeInSine'
+                    ); // end animate
+                },
+                function () {
+                    $(this).stop().animate(
+                        {
+                            backgroundColor: 'black',
+                            opacity: 1.0
+                        },
+                        2000,
+                        'easeOutBounce'
+                    ); // end animate
+                }
+            ); // end hover
+        }); // end of ready()
+
+    </script>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header>
+            <div class="content">
+                <div class="nav">
+                    <ul class="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a>
+                            <ul>
+                                <li><a href="gallery.html">Image Gallery</a></li>
+                                <li><a href="information.html">More Information</a>
+                                    <ul>
+                                        <li><a href="links.html">Information Links</a>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="facts.html">Facts</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <h1>Derek Snellman Sporting</h1>
+        <h2>Sport Facts</h2>
+        <h3>Select an image to learn more!</h3>
+
+        <div id="sports">
+            <div class="sport">
+                <h2>
+                    <img src="_images/baseball.jpeg" alt="">
+                </h2>
+                <div class="fact">
+                    <p>Baseball is known as "America's Favorite Pastime"</p>
+                </div>
+            </div>
+            <div class="sport">
+                <h2>
+                    <img src="_images/football.jpeg" alt="">
+                </h2>
+                <div class="fact">
+                    <p>The NFL was founded in 1920 as the American Professional Football Association</p>
+                </div>
+            </div>
+            <div class="sport">
+                <h2>
+                    <img src="_images/basketball.png" alt="">
+                </h2>
+                <div class="fact">
+                    <p>Basketball was invented at a YMCA in Springfield, MA by James Naismith</p>
+                </div>
+            </div>
+            <div class="sport">
+                <h2>
+                    <img src="_images/hockey.jpeg" alt="">
+                </h2>
+                <div class="fact">
+                    <p>The average NHL uses approximately 12 hockey pucks per game</p>
+                </div>
+            </div>
+            <div class="sport">
+                <h2>
+                    <img src="_images/golf.jpeg" alt="">
+                </h2>
+                <div class="fact">
+                    <p>Golf was invented in Scotland in 1457</p>
+                </div>
+            </div>
+            <div class="sport">
+                <h2>
+                    <img src="_images/soccer.png" alt="">
+                </h2>
+                <div class="fact">
+                    <p>Soccer is the most popular game in the world. In many countries it is known as “football”</p>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+<footer>
+    <p>Derek Snellman Course Project</p>
+</footer>
+
+</html>
