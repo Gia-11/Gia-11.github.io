@@ -1,38 +1,35 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="description" content="WGD310-Project">
-<meta name="keywords" content="HTML,CSS,XML,JavaScript">
-<meta name="author" content="SPate"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TEST</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="css/owstyle.css">
-<link href="smartmenus/sm-core-css.css" rel="stylesheet" >
-<link href="css/site.css" rel="stylesheet">
-<link href="smartmenus/sm-core-css.css" rel="stylesheet" >
+<html lang="en">
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <title>Overlay Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="WGD310-Project">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="SPate"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" media="screen" href="_css/magnific-popup.css">
+    <link rel="stylesheet" href="css/owstyle.css">
+    <link href="smartmenus/sm-core-css.css" rel="stylesheet" >
 <link href="smartmenus/sm-blue.css" rel="stylesheet" >
 <style>
   h1 {text-align: center;}
   h2 {text-align: center;}
-  p {text-align: left;}
+  p {text-align: center;}
   div {text-align: center;}
+  </style>
 
-   /* Hero image css */
-   .hero-image {
-            width: 100%;
-            height: auto;
-        }
-        </style>
+    <script type="text/javascript" src="js/libs/jquery-3.7.1.min.js"></script>
+    <script src="_js/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="smartmenus/jquery.smartmenus.min.js"></script>
 
+<script type="text/javascript" src="_js/jquery.magnific-popup.min.js"></script>
+<script src="_js/dropdown-menu.js"></script>
 
-<script src="_js/jquery.min.js"></script>
-<script src="smartmenus/jquery.smartmenus.min.js"></script>
-
-<script>
-$(document).ready(function() {
+    <script>
+        $(document).ready(function() {
   $('.sm').smartmenus({
     showFunction: function($ul, complete) {
       $ul.slideDown(250, complete);
@@ -42,47 +39,83 @@ $(document).ready(function() {
     }
 
   }); // end smartmenus
-}); // end ready
-</script>
+}); // end ready  
 
+$(document).ready(function ($) {
+        $('.fish').magnificPopup({
+            type: 'image',
+            delegate: 'a',
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+    </script>
+    </head>
 
-</head>
 <body>
-<div class="wrapper">
-  <header>
-    JAVASCRIPT <span class="amp">&amp;</span> jQUERY: THE&nbsp;MISSING&nbsp;MANUAL
-  </header>
-  <div class="content">
-    <div class="main">
-      <h1>Navigation Menu</h1>
-      <ul class="sm sm-blue">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us </a> <!-- removed drop down pages from about -->
-        </li>
-        <li><a href="#">Products </a>
-          <ul>
-            <li><a href="#">Gallery </a>
-            </li>
-            <li><a href="#">FAQ's </a>
-              <ul>
-                <li><a href="#">Services</a></li>  
-                </li>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">Links</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Contact</a></li> <!-- Contact page added here-->
-      </ul>
-    
-      <p style="clear:both;padding-top: 20px;" >Example of a responsive navigation menu using jQuery and Vasil Dinkov's <a href="http://www.smartmenus.org">SmartMenus Plugin</a>.</p>
-    </div>
-  </div>
+    <a href="index.html">
+        <img src="img/tire.png" alt="Logo" class="logo" ALT="logo" ALIGN=left> 
+        </a>
+    </header>
+        <br>
+        <div class="content">
+          <div class="main">
+            <h1>SPate - WBG 310 Final Project</h1>
+            <ul class="sm sm-blue">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="product.html">Product</a>
+                <ul>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="links.html">Links</a>
+                    <ul>
+                  <li><a href="service.html">Service</a></li>
+                  </ul>
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+              </li>
+            </ul>
+            </div>
+          </div>
 
-<footer>
-    <p>JavaScript &amp; jQuery: The Missing Manual, 3rd Edition, by <a href="http://sawmac.com/">David McFarland</a>. Published by <a href="http://oreilly.com/">O'Reilly Media, Inc</a>.</p>
-</footer>
-</div>
+        </header>
+  
+        <h2>Image Gallery</h2>
+        <div class="content">
+            <div class="fish">
+                <div id="gallery">
+                    <a href="img/img1.jpg" title="2x2 Ride"><img src="img/img1_thumb.jpg"
+                            width="100" height="67" alt="2x2 Riding Onewheels"></a>
+                </div>
+                <div id="gallery">
+                    <a href="img/img2.jpg" title="Attention"><img src="img/img2_thumb.jpg"
+                            width="100" height="67" alt="Attention Notification"></a>
+                </div>
+                <div id="gallery">
+                    <a href="img/img3.jpg" title="Pint and Pint X"><img src="img/img3_thumb.jpg"
+                            width="100" height="67" alt="Pint & Pint X"></a>
+                </div>
+                <div id="gallery">
+                    <a href="img/img4.jpg" title="Safety"><img src="img/img4_thumb.jpg"
+                            width="100" height="67" alt="Women with helment on Onwheel"></a>
+                </div>
+                <div id="gallery">
+                    <a href="img/img5.jpg" title="Foot placement"><img src="img/img5_thumb.jpg"
+                            width="100" height="67" alt="Foot on back pad of OneWheel"></a>
+                </div>
+                <div id="gallery">
+                    <a href="img/img6.jpg" title="Support"><img src="img/img6_thumb.jpg"
+                            width="100" height="67" alt="Man getting support from a friend on OneWheel"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <small>Copyright @ WéB1 2024 _ OneWheel Themed Project _ All rights reserved.</small>
+    </footer>
+    </div>
 </body>
 </html>
