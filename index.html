@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pate Week 1 Lab</title>
+    <style>
+        body {
+            background-color: #e4e4e4;
+            padding: 0;
+            margin: 0;
+        }
+        #container, h1, footer {
+            margin: 20px;
+            width: 97%;
+            background-color: ;
+            text-align: center;
+        }
+        .animations {
+            margin: 20px;
+            padding: 16px;
+            border: 1px solid gray;
+            border-radius: 15px;
+        }
+        .separator {
+            height: 15px;
+        }
+        .transitions {
+            margin: 20px;
+            padding: 16px;
+            border: 1px solid gray;
+            border-radius: 15px;
+        }
+        img {
+            width: 50px;
+        }
+        /* CSS animations */
+        #a1 { animation: move1 5s 3;}
+        @keyframes move1 {
+            0% { transform: translateX(0px);}
+            50% { transform: translateX(300px);}
+            100% { transform: translateX(0px);}
+        }
+        #a2 { animation: move2 5s 5;}
+        @keyframes move2 {
+            0% {transform: translateX(0px) rotate(0deg);}
+            50% {transform: translateX(500px) rotate(360deg);}
+            100% {transform: translate(0px) rotate(0deg);}
+        }
+        #a3 {animation: move3 10s 5;}
+        @keyframes move3 {
+            0% {transform: translateX(Opx) rotate(0deg);}
+            25% {transform: translateX(500px) rotate(360deg);}
+            50% {transform: translate(Opx) rotate(0deg);}
+            75% {transform: translate(-500px) rotate(-360deg);}
+            100% {transform: translate(Opx) rotate(0deg);}
+        }
+        /* CSS transitions */
+        #t1 { transition: transform 1s;}
+        #t1:hover {
+            cursor: pointer;
+            transform: rotateX(145deg);
+        }
+        #t2 { transition: transform 1s;}
+        #t2:hover {
+            cursor: pointer;
+            transform: rotateZ(225deg) scale(.8);
+        }
+        #t3 {
+            transition: transform 0.5s;
+        }
+        #t3:hover {
+            cursor: pointer;
+            transform: rotateY(145deg) scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Animation & Transition Demonstrations</h1>
+    <div id="container">
+        <div class="animations">
+            <!-- Animations will go here -->
+            <div>
+                <h2>CSS Animation 1</h2>
+                <img id="a1" src="img/a1.png" alt="animated image">
+            </div>
+            <div>
+                <h2>CSS Animation 2</h2>
+                <img id="a2" src="img/a2.png" alt="animated image">
+            </div>
+            <div>
+                <h2>CSS Animation 3</h2>
+                <img id="a3" src="img/a3.png" alt="animated image">
+            </div>
+
+        </div>
+        <div class="separator"></div>
+        <div class="transitions">
+            <!-- Transitions will go here -->
+            <div>
+                <h2>CSS Transitions 1</h2>
+                <img id="t1" src="img/a1.png" alt="transitioned image">
+            </div>
+            <div>
+                <h2>CSS Transitions 2</h2>
+                <img id="t2" src="img/a2.png" alt="transitioned image">
+            </div>
+            <div>
+                <h2>CSS Transitions 3</h2>
+                <img id="t3" src="img/a3.png" alt="transitioned image">
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>Copyright 2024</footer>
+
+</body>
+
+</html>
