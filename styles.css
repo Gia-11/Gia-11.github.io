@@ -30,3 +30,7 @@ input {
     font-size: 15px;
     padding: 10px;
 }
+
+#edit-view {
+    display: none;
+}
