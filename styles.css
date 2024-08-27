@@ -3,6 +3,7 @@ img {
     height: 270;
     display: block;
     margin-bottom: 40px;
+    border-radius: 50%
 }
 
 div {
