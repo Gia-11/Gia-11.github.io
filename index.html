@@ -1,164 +1,47 @@
 <!DOCTYPE html>
- 
-<html>
- 
+<html lang="en">
+
 <head>
-    <title>Week 2 Lab</title>
- 
-    <style>
-        img {
-            width: 50px;
-        }
- 
-        body {
-            background-color: #e4e4e4;
-            padding: 0;
-            margin: 0;
-        }
- 
-        #container,
-        h1,
-        footer {
-            margin: 20px;
-            width: 97%;
-            text-align: center;
-        }
- 
-        .animations {
-            margin: 20px;
-            padding: 16px;
-            height: 300px;
-            border: 1px solid gray;
-            border-radius: 15px;
-            background-color: #f5f5f0;
-        }
- 
-        .separator {
-            height: 15px;
-        }
- 
-        .transitions {
-            margin: 20px;
-            padding: 16px;
-            border: 1px solid gray;
-            border-radius: 15px;
-            background-color: #f5f5f0;
-            text-align: left;
-        }   
-
-        /* CSS for Button 1 */
-
-        #btn1 {
-    width: 55px;
-    height: 55px;
-    display: inline-block;
-    background-color: cornflowerblue;
- 
-    transition: all 0.1s ease-in-out;
-    transform: translate3D(0, 0, 0); /* translate3D (0,0,0) causing the browser to send this work to the GPU if possible */
-}
- 
-#btn1:hover {
-    cursor: pointer;
-    background-color: #00FF00;
-}
-
-/* CSS for Button 2 */
-#btn2 {
-    width: 55px;
-    height: 55px;
-    display: inline-block;
-    background-color: cornflowerblue;
-
-    transition: all 0.1s ease-in-out;
-    transform: translate3D(0, 0, 0); /* translate3D (0,0,0) causing the browser to send this work to the GPU if possible */
-}
-
-#btn2:hover {
-    cursor: pointer;
-    filter: drop-shadow(8px 8px 5px gray);
-}
-
-/* CSS for Button 3 */
-#btn3 {
-    width: 55px;
-    height: 55px;
-    display: inline-block;
-    background-color: cornflowerblue;
-
-    transition: all 0.1s ease-in-out;
-    transform: translate3D(0, 0, 0); /* translate3D (0,0,0) causing the browser to send this work to the GPU if possible */
-}
-
-#btn3:hover {
-    cursor: pointer;
-    background-color: pink; /* changed background color */
-    filter: blur(5px); /* added blur */
-}
-
-/* CSS for Button 4 */
-#btn4 {
-    width: 55px;
-    height: 55px;
-    display: inline-block;
-    background-color: cornflowerblue;
-
-    transition: all 0.1s ease-in-out;
-    transform: translate3D(0, 0, 0); /* translate3D (0,0,0) causing the browser to send this work to the GPU if possible */
-}
-
-/* CSS for the Ball */
-#btn4:hover {
-    cursor: pointer;
-    filter: opacity(30%); /* changed opacity */
-}
-
-#ball {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #FF5722;
-    display: inline-block; 
-    /* ADD THESE LINES BELOW */
-    animation: bounce .5s;
-    animation-direction: alternate;      
-    animation-timing-function: cubic-bezier(.5, 0.05, 1, .5);
-    animation-iteration-count: infinite;          
-}
-
-/* Keyframes for bouncing ball - won't bounce without it */
-@keyframes bounce {
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-    to {
-        transform: translate3d(0, 275px, 0);  /* the translate3d(0,0,0) transform property, which ensures use of the GPU in the translation. We also only specify the change in the Y-direction only. So, down, then up. */             
-    }
-}
-    </style>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teamable</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js"></script>
 </head>
- 
+
 <body>
-    <h1>Timing Functions</h1>
-    <div id="container">
-        <h2>Hover Effects</h2>
-        <div class="transitions">
-            <div id="btn1"></div>   
-            <div id="btn2"></div>
-            <div id="btn3"></div>
-            <div id="btn4"></div>
-        </div>
- 
-        <div class="separator"></div>
- 
-        <h2>Movement Effects</h2>
-        <div class="animations">
-            <div id="ball"></div>
-        </div>
- 
+    <div id="display-view">
+        <h1>User Profile</h1>
+        <img src="profile.jpeg">
+
+        <span>Name: </span><b>Anna Smith</b>
+        <hr /> <!-- html for line on screen -->
+
+        <span>Email: </span><b>anna.smith@example.com</b>
+        <hr /> <!-- html for line on screen -->
+
+        <span>Interests: </span><b>Coding</b>
+        <hr /> <!-- html for line on screen -->
+
+        <button>Edit Profile</button>
     </div>
-    <footer>Pate WK2 Lab - Copyright 2024</footer>
+
+
+    <div id="edit-view">
+        <h1>User Profile</h1>
+        <img src="profile.jpeg">
+        <span>Name: </span>
+        <input type="text" placeholder="Your Name" />
+        <hr /> <!-- html for line on screen -->
+        <span>Email: </span>
+        <input type="text" placeholder="email@example.com" />
+        <hr /> <!-- html for line on screen -->
+        <span>Interests: </span>
+        <input type="text" placeholder="scripting" />
+        <hr /> <!-- html for line on screen -->
+        <button>Update Profile</button>
+    </div>
+
 </body>
- 
+
 </html>
