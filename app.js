@@ -5,7 +5,7 @@ function handleEditProfile() {
 }
 
 // hides edit view page
-function handleEditProfile() {
+function handleUpdateProfile() {
     document.getElementById("edit-view").style.display = "none"
     document.getElementById("display-view").style.display = "block"
 }
