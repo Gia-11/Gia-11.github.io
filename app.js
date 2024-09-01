@@ -6,6 +6,10 @@ function handleEditProfile() {
 
 // hides edit view page
 function handleUpdateProfile() {
+    var updatedName = document.getElementById("input-name").value
+    var name = document.getElementById("name")
+    name.textContent = updatedName
+    
     document.getElementById("edit-view").style.display = "none"
     document.getElementById("display-view").style.display = "block"
 }
