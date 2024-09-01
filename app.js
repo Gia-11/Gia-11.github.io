@@ -1,4 +1,3 @@
-// hides display view page
 function handleEditProfile() {
     var name = document.getElementById("name").textContent
     var inputName = document.getElementById("input-name")
@@ -16,7 +15,7 @@ function handleEditProfile() {
     document.getElementById("display-view").style.display = "none"
 }
 
-// hides edit view page
+
 function handleUpdateProfile() {
     var updatedName = document.getElementById("input-name").value
     var name = document.getElementById("name")
